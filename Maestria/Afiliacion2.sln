@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28902.138
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Afiliacion2", "Afiliacion2\Afiliacion2.vbproj", "{E71416E2-4277-4CD0-95DB-2981D2059F30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{90CCBB86-DDFC-4F36-9D42-CC1AA4685C1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modelos", "Modelos", "{FEA54211-916B-437A-9399-754FFCE4731D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BComponents", "BComponents\BComponents.vbproj", "{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BEntities", "BEntities\BEntities.vbproj", "{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DALayer", "DALayer\DALayer.vbproj", "{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Librerias", "Librerias", "{89317547-9432-4223-A089-3B1B9E82CC57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E71416E2-4277-4CD0-95DB-2981D2059F30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E71416E2-4277-4CD0-95DB-2981D2059F30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E71416E2-4277-4CD0-95DB-2981D2059F30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E71416E2-4277-4CD0-95DB-2981D2059F30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E71416E2-4277-4CD0-95DB-2981D2059F30} = {90CCBB86-DDFC-4F36-9D42-CC1AA4685C1E}
+		{50EF84EA-9C71-4EAE-BED1-B1D90C7869FF} = {FEA54211-916B-437A-9399-754FFCE4731D}
+		{BA05B28D-ECF6-42A1-B8B4-10AF4AE175A9} = {FEA54211-916B-437A-9399-754FFCE4731D}
+		{24BF88E1-43F6-4ABD-BD2F-42AF03C3E4DA} = {FEA54211-916B-437A-9399-754FFCE4731D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45
+		SolutionGuid = {7D8B2319-2084-4518-B2BA-045061F306D0}
+	EndGlobalSection
+EndGlobal

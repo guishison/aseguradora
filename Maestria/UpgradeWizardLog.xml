@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Afiliacion2.vbproj" />
+  <event action="Analyze" type="Success" name="GridLocalization.es-Es.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\GridLocalization.es-Es.resx" />
+  <event action="Analyze" type="Success" name="RadComboBox.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadComboBox.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadComboBox.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadComboBox.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Dialogs.de-DE.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Dialogs.de-DE.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Dialogs.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Dialogs.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Dialogs.fr-FR.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Dialogs.fr-FR.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Dialogs.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Dialogs.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Main.de-DE.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Main.de-DE.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Main.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Main.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Main.fr-FR.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Main.fr-FR.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Main.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Main.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Modules.de-DE.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Modules.de-DE.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Modules.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Modules.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Modules.fr-FR.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Modules.fr-FR.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Modules.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Modules.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Tools.de-DE.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Tools.de-DE.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Tools.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Tools.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Tools.fr-FR.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Tools.fr-FR.resx" />
+  <event action="Analyze" type="Success" name="RadEditor.Tools.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadEditor.Tools.resx" />
+  <event action="Analyze" type="Success" name="RadGrid.Main.es.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadGrid.Main.es.resx" />
+  <event action="Analyze" type="Success" name="RadGrid.Main.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadGrid.Main.resx" />
+  <event action="Analyze" type="Success" name="RadLabel.en-En.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadLabel.en-En.resx" />
+  <event action="Analyze" type="Success" name="RadProgressArea.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadProgressArea.resx" />
+  <event action="Analyze" type="Success" name="RadScheduler.Main.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadScheduler.Main.resx" />
+  <event action="Analyze" type="Success" name="RadSpell.Dialog.de-DE.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadSpell.Dialog.de-DE.resx" />
+  <event action="Analyze" type="Success" name="RadSpell.Dialog.fr-FR.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadSpell.Dialog.fr-FR.resx" />
+  <event action="Analyze" type="Success" name="RadSpell.Dialog.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadSpell.Dialog.resx" />
+  <event action="Analyze" type="Success" name="RadUpload.es-ES.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadUpload.es-ES.resx" />
+  <event action="Analyze" type="Success" name="RadUpload.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_GlobalResources\RadUpload.resx" />
+  <event action="Analyze" type="Success" name="Labels.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_LocalResources\Labels.resx" />
+  <event action="Analyze" type="Success" name="Proveedor.aspx.en-Us.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_LocalResources\Proveedor.aspx.en-Us.resx" />
+  <event action="Analyze" type="Success" name="Proveedor.aspx.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\App_LocalResources\Proveedor.aspx.resx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\assets\master\MasterPage.Master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\assets\master\MasterPage.Master" />
+  <event action="Analyze" type="Success" name="MasterPage.Master" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\assets\master\MasterPage.Master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Default.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Default.aspx" />
+  <event action="Analyze" type="Success" name="Default.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Default.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Download.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Download.aspx" />
+  <event action="Analyze" type="Success" name="Download.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Download.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\login.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\login.aspx" />
+  <event action="Analyze" type="Success" name="login.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\login.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Clientes.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\Clientes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\DetalleMulta.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\DetalleMulta.aspx" />
+  <event action="Analyze" type="Success" name="DetalleMulta.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\DetalleMulta.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\ParametroEnjoyClub.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\ParametroEnjoyClub.aspx" />
+  <event action="Analyze" type="Success" name="ParametroEnjoyClub.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\ParametroEnjoyClub.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\PuntosAdicionales.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\PuntosAdicionales.aspx" />
+  <event action="Analyze" type="Success" name="PuntosAdicionales.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\PuntosAdicionales.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\TarjetaEnjoy.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\TarjetaEnjoy.aspx" />
+  <event action="Analyze" type="Success" name="TarjetaEnjoy.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\TarjetaEnjoy.aspx" />
+  <event action="Analyze" type="Success" name="UsoPuntosVoucher.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\UsoPuntosVoucher.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\VoucherPU.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\VoucherPU.aspx" />
+  <event action="Analyze" type="Success" name="VoucherPU.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\VoucherPU.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\BolsaPunto.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\BolsaPunto.aspx" />
+  <event action="Analyze" type="Success" name="BolsaPunto.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\BolsaPunto.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\CargoJerarquia.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\CargoJerarquia.aspx" />
+  <event action="Analyze" type="Success" name="CargoJerarquia.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\CargoJerarquia.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Clasificadores.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Clasificadores.aspx" />
+  <event action="Analyze" type="Success" name="Clasificadores.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Clasificadores.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ClasificadoresTipo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ClasificadoresTipo.aspx" />
+  <event action="Analyze" type="Success" name="ClasificadoresTipo.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ClasificadoresTipo.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Departamento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Departamento.aspx" />
+  <event action="Analyze" type="Success" name="Departamento.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Departamento.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ParametroPuntoAdicional.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ParametroPuntoAdicional.aspx" />
+  <event action="Analyze" type="Success" name="ParametroPuntoAdicional.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\ParametroPuntoAdicional.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Servicios.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Servicios.aspx" />
+  <event action="Analyze" type="Success" name="Servicios.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\Servicios.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\WebForm1.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\WebForm1.aspx" />
+  <event action="Analyze" type="Success" name="WebForm1.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Base\WebForm1.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Boleta.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Boleta.aspx" />
+  <event action="Analyze" type="Success" name="Boleta.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Boleta.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\BoletaElectronica.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\BoletaElectronica.aspx" />
+  <event action="Analyze" type="Success" name="BoletaElectronica.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\BoletaElectronica.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Caja.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Caja.aspx" />
+  <event action="Analyze" type="Success" name="Caja.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Caja.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="CajaIngreso.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngresoV2.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngresoV2.aspx" />
+  <event action="Analyze" type="Success" name="CajaIngresoV2.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaIngresoV2.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaInstancia.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaInstancia.aspx" />
+  <event action="Analyze" type="Success" name="CajaInstancia.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaInstancia.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaSolicitud.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaSolicitud.aspx" />
+  <event action="Analyze" type="Success" name="CajaSolicitud.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\CajaSolicitud.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Devolucion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Devolucion.aspx" />
+  <event action="Analyze" type="Success" name="Devolucion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Devolucion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\ReingresoCaja.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\ReingresoCaja.aspx" />
+  <event action="Analyze" type="Success" name="ReingresoCaja.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\ReingresoCaja.aspx" />
+  <event action="Analyze" type="Success" name="RptBoleta_Electronica.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\RptBoleta_Electronica.resx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Solicitudes.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Solicitudes.aspx" />
+  <event action="Analyze" type="Success" name="Solicitudes.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\Solicitudes.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Appointment.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Appointment.aspx" />
+  <event action="Analyze" type="Success" name="Appointment.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Appointment.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionContactos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionContactos.aspx" />
+  <event action="Analyze" type="Success" name="AsignacionContactos.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionContactos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionManual.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionManual.aspx" />
+  <event action="Analyze" type="Success" name="AsignacionManual.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionManual.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionOperador.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionOperador.aspx" />
+  <event action="Analyze" type="Success" name="AsignacionOperador.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\AsignacionOperador.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Citas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Citas.aspx" />
+  <event action="Analyze" type="Success" name="Citas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Citas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Encuestadores.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Encuestadores.aspx" />
+  <event action="Analyze" type="Success" name="Encuestadores.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Encuestadores.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\GrupoSalaTMK.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\GrupoSalaTMK.aspx" />
+  <event action="Analyze" type="Success" name="GrupoSalaTMK.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\GrupoSalaTMK.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Importacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Importacion.aspx" />
+  <event action="Analyze" type="Success" name="Importacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Importacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContacto.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContacto.aspx" />
+  <event action="Analyze" type="Success" name="ImportacionContacto.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContacto.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContactoEncuestador.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContactoEncuestador.aspx" />
+  <event action="Analyze" type="Success" name="ImportacionContactoEncuestador.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionContactoEncuestador.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionPersonal.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionPersonal.aspx" />
+  <event action="Analyze" type="Success" name="ImportacionPersonal.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ImportacionPersonal.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Llamadas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Llamadas.aspx" />
+  <event action="Analyze" type="Success" name="Llamadas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\Llamadas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ReAsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ReAsignacion.aspx" />
+  <event action="Analyze" type="Success" name="ReAsignacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\ReAsignacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\SalaTMK.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\SalaTMK.aspx" />
+  <event action="Analyze" type="Success" name="SalaTMK.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\CallCenter\SalaTMK.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\CarteraContacto.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\CarteraContacto.aspx" />
+  <event action="Analyze" type="Success" name="CarteraContacto.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\CarteraContacto.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Contacto.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Contacto.aspx" />
+  <event action="Analyze" type="Success" name="Contacto.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Contacto.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Proveedor.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Proveedor.aspx" />
+  <event action="Analyze" type="Success" name="Proveedor.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Captacion\Proveedor.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\AsignarCobrador.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\AsignarCobrador.aspx" />
+  <event action="Analyze" type="Success" name="AsignarCobrador.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\AsignarCobrador.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Cobrador.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Cobrador.aspx" />
+  <event action="Analyze" type="Success" name="Cobrador.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Cobrador.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\DocumentoCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\DocumentoCobranza.aspx" />
+  <event action="Analyze" type="Success" name="DocumentoCobranza.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\DocumentoCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\PalabraClaveCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\PalabraClaveCobranza.aspx" />
+  <event action="Analyze" type="Success" name="PalabraClaveCobranza.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\PalabraClaveCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\ParametroCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\ParametroCobranza.aspx" />
+  <event action="Analyze" type="Success" name="ParametroCobranza.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\ParametroCobranza.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Reasignacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Reasignacion.aspx" />
+  <event action="Analyze" type="Success" name="Reasignacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Cobranza\Reasignacion.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comision.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comision.aspx" />
+  <event action="Analyze" type="Success" name="Comision.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comision.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comisiones.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comisiones.aspx" />
+  <event action="Analyze" type="Success" name="Comisiones.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\Comisiones.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\ParametroPorcentaje.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\ParametroPorcentaje.aspx" />
+  <event action="Analyze" type="Success" name="ParametroPorcentaje.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Comision\ParametroPorcentaje.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\CambioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\CambioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="CambioPrograma.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\CambioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Contrato.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Contrato.aspx" />
+  <event action="Analyze" type="Success" name="Contrato.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Contrato.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoReserva.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoReserva.aspx" />
+  <event action="Analyze" type="Success" name="ContratoReserva.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoReserva.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCI.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCI.aspx" />
+  <event action="Analyze" type="Success" name="ContratoSCI.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCI.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCIReserva.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCIReserva.aspx" />
+  <event action="Analyze" type="Success" name="ContratoSCIReserva.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoSCIReserva.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoYotau.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoYotau.aspx" />
+  <event action="Analyze" type="Success" name="ContratoYotau.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ContratoYotau.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\DoumentoContrato.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\DoumentoContrato.aspx" />
+  <event action="Analyze" type="Success" name="DoumentoContrato.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\DoumentoContrato.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Finalizacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Finalizacion.aspx" />
+  <event action="Analyze" type="Success" name="Finalizacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Finalizacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\PalabrasClaveContrato.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\PalabrasClaveContrato.aspx" />
+  <event action="Analyze" type="Success" name="PalabrasClaveContrato.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\PalabrasClaveContrato.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDescuento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDescuento.aspx" />
+  <event action="Analyze" type="Success" name="ParametroDescuento.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDescuento.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDevolucion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDevolucion.aspx" />
+  <event action="Analyze" type="Success" name="ParametroDevolucion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroDevolucion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMantencion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMantencion.aspx" />
+  <event action="Analyze" type="Success" name="ParametroMantencion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMantencion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMora.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMora.aspx" />
+  <event action="Analyze" type="Success" name="ParametroMora.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ParametroMora.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Refinanciamiento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Refinanciamiento.aspx" />
+  <event action="Analyze" type="Success" name="Refinanciamiento.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Refinanciamiento.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\RenovacionMembresia.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\RenovacionMembresia.aspx" />
+  <event action="Analyze" type="Success" name="RenovacionMembresia.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\RenovacionMembresia.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ReportePrecioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ReportePrecioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="ReportePrecioPrograma.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\ReportePrecioPrograma.aspx" />
+  <event action="Analyze" type="Success" name="RptContrato.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\RptContrato.resx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Validacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Validacion.aspx" />
+  <event action="Analyze" type="Success" name="Validacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Validacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Verificacion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Verificacion.aspx" />
+  <event action="Analyze" type="Success" name="Verificacion.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\Verificacion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\HelpDesk\HelpDesk.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\HelpDesk\HelpDesk.aspx" />
+  <event action="Analyze" type="Success" name="HelpDesk.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\HelpDesk\HelpDesk.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Hotel.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Hotel.aspx" />
+  <event action="Analyze" type="Success" name="Hotel.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Hotel.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\HotelPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\HotelPrograma.aspx" />
+  <event action="Analyze" type="Success" name="HotelPrograma.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\HotelPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\PeriodoSemanal.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\PeriodoSemanal.aspx" />
+  <event action="Analyze" type="Success" name="PeriodoSemanal.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\PeriodoSemanal.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\ProgramaSalaVenta.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\ProgramaSalaVenta.aspx" />
+  <event action="Analyze" type="Success" name="ProgramaSalaVenta.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\ProgramaSalaVenta.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Temporada.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Temporada.aspx" />
+  <event action="Analyze" type="Success" name="Temporada.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\Temporada.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\TipoPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\TipoPrograma.aspx" />
+  <event action="Analyze" type="Success" name="TipoPrograma.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Inventario\TipoPrograma.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\AtencionSocio.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\AtencionSocio.aspx" />
+  <event action="Analyze" type="Success" name="AtencionSocio.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\AtencionSocio.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Bitacoras.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Bitacoras.aspx" />
+  <event action="Analyze" type="Success" name="Bitacoras.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Bitacoras.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\CitasConfirmadas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\CitasConfirmadas.aspx" />
+  <event action="Analyze" type="Success" name="CitasConfirmadas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\CitasConfirmadas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Cobranzas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Cobranzas.aspx" />
+  <event action="Analyze" type="Success" name="Cobranzas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Cobranzas.aspx" />
+  <event action="Analyze" type="Success" name="Consolidado.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Consolidado.resx" />
+  <event action="Analyze" type="Success" name="Consolidado2.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Consolidado2.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Contabilidad.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Contabilidad.aspx" />
+  <event action="Analyze" type="Success" name="Contabilidad.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Contabilidad.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Inventario.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Inventario.aspx" />
+  <event action="Analyze" type="Success" name="Inventario.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Inventario.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\InventarioUso.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\InventarioUso.aspx" />
+  <event action="Analyze" type="Success" name="InventarioUso.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\InventarioUso.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\MovimientoSalaQ.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\MovimientoSalaQ.aspx" />
+  <event action="Analyze" type="Success" name="MovimientoSalaQ.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\MovimientoSalaQ.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Teleoperadores.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Teleoperadores.aspx" />
+  <event action="Analyze" type="Success" name="Teleoperadores.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Teleoperadores.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Tesoreria.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Tesoreria.aspx" />
+  <event action="Analyze" type="Success" name="Tesoreria.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Tesoreria.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\UsoPuntosConsolidado.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\UsoPuntosConsolidado.aspx" />
+  <event action="Analyze" type="Success" name="UsoPuntosConsolidado.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\UsoPuntosConsolidado.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Ventas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Ventas.aspx" />
+  <event action="Analyze" type="Success" name="Ventas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Ventas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Circular.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Circular.aspx" />
+  <event action="Analyze" type="Success" name="Circular.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Circular.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Cuenta.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Cuenta.aspx" />
+  <event action="Analyze" type="Success" name="Cuenta.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Cuenta.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoFormulario.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoFormulario.aspx" />
+  <event action="Analyze" type="Success" name="PermisoFormulario.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoFormulario.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPersonal.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPersonal.aspx" />
+  <event action="Analyze" type="Success" name="PermisoPersonal.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPersonal.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPlantilla.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPlantilla.aspx" />
+  <event action="Analyze" type="Success" name="PermisoPlantilla.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PermisoPlantilla.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Personal.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Personal.aspx" />
+  <event action="Analyze" type="Success" name="Personal.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\Personal.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PersonalDepartamento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PersonalDepartamento.aspx" />
+  <event action="Analyze" type="Success" name="PersonalDepartamento.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Seguridad\PersonalDepartamento.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\BoletaIngresoSinNumero.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\BoletaIngresoSinNumero.aspx" />
+  <event action="Analyze" type="Success" name="BoletaIngresoSinNumero.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\BoletaIngresoSinNumero.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Cargo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Cargo.aspx" />
+  <event action="Analyze" type="Success" name="Cargo.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Cargo.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\GestionCuentas.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\GestionCuentas.aspx" />
+  <event action="Analyze" type="Success" name="GestionCuentas.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\GestionCuentas.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\HistoricoCargos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\HistoricoCargos.aspx" />
+  <event action="Analyze" type="Success" name="HistoricoCargos.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\HistoricoCargos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Mandato.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Mandato.aspx" />
+  <event action="Analyze" type="Success" name="Mandato.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Mandato.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Rendimiento.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Rendimiento.aspx" />
+  <event action="Analyze" type="Success" name="Rendimiento.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\Rendimiento.aspx" />
+  <event action="Analyze" type="Success" name="ReporCargo.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\ReporCargo.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\ReporteCargo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\ReporteCargo.aspx" />
+  <event action="Analyze" type="Success" name="ReporteCargo.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\ReporteCargo.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\SinNroBoletaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\SinNroBoletaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="SinNroBoletaIngreso.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\SinNroBoletaIngreso.aspx" />
+  <event action="Analyze" type="Success" name="test.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\test.resx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\InstanciaSala.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\InstanciaSala.aspx" />
+  <event action="Analyze" type="Success" name="InstanciaSala.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\InstanciaSala.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Moneda.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Moneda.aspx" />
+  <event action="Analyze" type="Success" name="Moneda.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Moneda.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSala.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSala.aspx" />
+  <event action="Analyze" type="Success" name="MovimientoSala.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSala.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSalaSCI.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSalaSCI.aspx" />
+  <event action="Analyze" type="Success" name="MovimientoSalaSCI.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\MovimientoSalaSCI.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ParametroCargo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ParametroCargo.aspx" />
+  <event action="Analyze" type="Success" name="ParametroCargo.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ParametroCargo.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\PersonalSala.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\PersonalSala.aspx" />
+  <event action="Analyze" type="Success" name="PersonalSala.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\PersonalSala.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ReaperturaSala.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ReaperturaSala.aspx" />
+  <event action="Analyze" type="Success" name="ReaperturaSala.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ReaperturaSala.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Sala.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Sala.aspx" />
+  <event action="Analyze" type="Success" name="Sala.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\Sala.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\TipoCambio.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\TipoCambio.aspx" />
+  <event action="Analyze" type="Success" name="TipoCambio.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\TipoCambio.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ValorPuntos.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ValorPuntos.aspx" />
+  <event action="Analyze" type="Success" name="ValorPuntos.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\ValorPuntos.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\WebForm2.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\WebForm2.aspx" />
+  <event action="Analyze" type="Success" name="WebForm2.aspx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Venta\WebForm2.aspx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\packages.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="web.Debug.config" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="web.Release.config" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.Release.config" />
+  <event action="Analyze" type="Success" name="Afiliacion2" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Afiliacion2.vbproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\BComponents.vbproj" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\packages.config" />
+  <event action="Analyze" type="Success" name="BComponents" path="C:\Users\GUILLERMO\Downloads\Yotau\BComponents\BComponents.vbproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\BEntities\BEntities.vbproj" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\BEntities\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="BEntities" path="C:\Users\GUILLERMO\Downloads\Yotau\BEntities\BEntities.vbproj" />
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\DALayer.vbproj" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\packages.config" />
+  <event action="Analyze" type="Success" name="DALayer" path="C:\Users\GUILLERMO\Downloads\Yotau\DALayer\DALayer.vbproj" />
+  <event action="Analyze" type="Success" name="Afiliacion2" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2.sln" />
+  <event action="Backup" type="Success" name="Afiliacion2" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Afiliacion2.vbproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Afiliacion2.vbproj" />
+  <event action="Upgrade" type="Success" name="UsoPuntosVoucher.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\AtencionAlSocio\UsoPuntosVoucher.resx" />
+  <event action="Upgrade" type="Success" name="RptBoleta_Electronica.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Caja\RptBoleta_Electronica.resx" />
+  <event action="Upgrade" type="Success" name="RptContrato.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Contrato\RptContrato.resx" />
+  <event action="Upgrade" type="Success" name="Consolidado.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Consolidado.resx" />
+  <event action="Upgrade" type="Success" name="Consolidado2.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Reportes\Consolidado2.resx" />
+  <event action="Upgrade" type="Success" name="ReporCargo.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\ReporCargo.resx" />
+  <event action="Upgrade" type="Success" name="test.resx" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Modulos\Tesoreria\test.resx" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Upgrade" type="Success" name="Http Handlers" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Upgrade" type="Success" name="Handlers (IIS7+)" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Upgrade" type="Success" name="web.config" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\web.config" />
+  <event action="Upgrade" type="Success" name="Afiliacion2" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2\Afiliacion2.vbproj" />
+  <event action="Upgrade" type="Success" name="Afiliacion2" path="C:\Users\GUILLERMO\Downloads\Yotau\Afiliacion2.sln" />
+</log>

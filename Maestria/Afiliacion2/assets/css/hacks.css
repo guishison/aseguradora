@@ -1,0 +1,249 @@
+﻿
+/*span .RadButton_Bootstrap + .rbSkinnedButton + .btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}*/
+/*html body .RadInput_Bootstrap .riRead, html body .RadInput_Read_Bootstrap, html body .RadInput_Bootstrap .riDisabled, html body .RadInput_Disabled_Bootstrap{
+    color: #C0C0C0 !important;
+    font-style:italic !important;
+}*/
+
+span + .RadInput + .combo100porc {
+    width: 100% !important;
+}
+.RadMenu_Bootstrap{
+    width:auto;
+}
+.RadMenu .rmSlide, .RadMenu_Context {
+    width: auto;
+}
+.RadMenu_Bootstrap .rmGroup, .RadMenu_Bootstrap.rmRoundedCorners .rmGroup, .RadMenu_Bootstrap .rmMultiColumn {
+    width: 200px !important;
+}
+
+span+.RadButton.RadButton_Bootstrap.rbSkinnedButton.btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+.RadButton_Bootstrap + .btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+
+.RadButton_Bootstrap {
+    background-color: #004080 !important;
+}
+/*.RadButton .RadButton_Bootstrap .rbSkinnedButton .btn-danger {
+    background-color: #d9534f !important;
+}*/
+    .RadButton_Bootstrap + .btn-extra {
+        background-color: #195218 !important;
+    }
+        .RadButton_Bootstrap + .rbSkinnedButton + .btn-danger {
+            color: #fff !important;
+            background-color: #d9534f !important;
+            border-color: #d43f3a !important;
+        }
+/*span .RadButton_Bootstrap + .rbSkinnedButton + .btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}
+span RadButton .RadButton_Bootstrap + .rbSkinnedButton + .btn-danger {
+    color: #fff !important;
+    background-color: #d9534f !important;
+    border-color: #d43f3a !important;
+}*/
+
+    .RadButton_Bootstrap.checkbox,
+    .RadButton_Bootstrap.checkbox:hover {
+        background-color: #FFF !important;
+    }
+
+    .RadInput textarea.riTextBox {
+    height: 100px !important;
+}
+    textarea#ctl00_ContentPlaceHolder1_rtbDescripcionAdjuntos {
+    height: 50px !Important;
+    width: 100% !Important;
+}
+input#ctl00_ContentPlaceHolder1_rntCantidadCuotas {
+    width: 100% !important;
+    float: right !important;
+}
+span#ctl00_ContentPlaceHolder1_rntCantidadCuotas_wrapper {
+    min-width: 50px !important;
+    width: 20% !important;
+    float: right !important;
+}
+span.RadButton_Bootstrap.rbToggleButton:hover {
+    background-color: #FFF !important;
+}
+    span.RadButton_Bootstrap.rbToggleButton{
+        background-color: #FFF !important;
+    }
+
+        .RadButton_Bootstrap.checkbox span,
+        .RadButton_Bootstrap.checkbox:hover span {
+            color: #333 !important;
+        }
+
+    .RadButton_Bootstrap input {
+        color: #FFF !important;
+    }
+
+    .RadButton_Bootstrap span {
+        color: #FFF !important;
+    }
+        
+    .RadButton_Bootstrap:hover,
+    .RadButton_Bootstrap + .btn-danger:hover {
+        background-color: #EAEAEC !important;
+    }
+    .RadButton_Bootstrap:hover,
+    .RadButton_Bootstrap + .btn-extra:hover {
+        background-color: #EAEAEC !important;
+    }
+
+        .RadButton_Bootstrap:hover input,
+        .RadButton_Bootstrap:hover span {
+            color: #333 !important;
+        }
+
+.RadInput_Bootstrap {
+    width: 100% !important;
+}
+
+.RadUpload .ruBrowse{
+    width:91px !important;
+}
+
+.RadGrid_Bootstrap .rgCurrentPage {
+    background-color: #004080 !important;
+}
+
+.RadGrid_Bootstrap .RadButton_Bootstrap {
+    background-color: #F5F5F5 !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 1px 0px !important;
+    font: 16px/1 FontAwesome !important;
+}
+
+    .RadGrid_Bootstrap .RadButton_Bootstrap .rbPrimaryIcon {
+        left: 3px !important;
+        top: 3px !important;
+    }
+
+    .RadButton .rbIcon::before{
+        display:block;
+        font: 16px/1 FontAwesome !important;
+        /*align-content:center;*/
+    }
+
+button#ctl00_ContentPlaceHolder1_rbCambioPassword.RadCheckBox.RadButton.RadButton_Default.rbCheckBox.rbRounded.rbIconOnly.btnAgree {
+    display: inline-block !important;
+    font: 16px/1 "WebComponentsIcons" !important;
+}
+span.rbIcon.p-icon.p-i-checkbox-checked.rbToggleCheckboxChecked::before{
+    display: inline-block !important;
+    font: 16px/1 "WebComponentsIcons" !important;
+}
+.RadButton .rbIcon .btnAgree::before {
+    position: absolute;
+    display: inline-block !important;
+    font: 16px/1 "WebComponentsIcons" !important;
+}
+/*#ctl00_ContentPlaceHolder1_chkReajuste span.rbIcon.p-icon.p-i-checkbox-checked.rbToggleCheckboxChecked::before {
+    font: bold 16px arial, verdana !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    color: black;
+}*/
+
+    /*.RadButton .RadButton_Bootstrap .rbButton .rbRounded .rbIconButton .rbPrimary span{
+        background-color: #F5F5F5 !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 1px 0px !important;
+    font: 16px/1 FontAwesome !important;
+    }
+     .RadGrid_Bootstrap .RadButton_Bootstrap .rbIcon .p-icon .rbPrimaryIcon{
+        left: 3px !important;
+        top: 3px !important;
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    .RadGrid_Bootstrap .RadButton_Bootstrap .rbIcon .p-icon .rbPrimaryIcon{
+         display: inline-block;
+    font: 14px/1 FontAwesome !important;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+     }*/
+    .RadGrid_Bootstrap .RadButton_Bootstrap span {
+        color: #333 !important;
+    }
+
+    .RadGrid_Bootstrap .RadButton_Bootstrap:hover {
+        background-color: #1755ff !important;
+    }
+
+.RadGrid_Bootstrap .rgHeader .RadButton_Bootstrap.checkbox,
+.RadGrid_Bootstrap .rgHeader .RadButton_Bootstrap.checkbox:hover {
+    background-color: #F5F5F5 !important;
+}
+
+.RadGrid_Bootstrap .RadButton_Bootstrap.checkbox,
+.RadGrid_Bootstrap .RadButton_Bootstrap.checkbox:hover {
+    background-color: #FFF !important;
+}
+
+.RadGrid_Bootstrap .rgAltRow .RadButton_Bootstrap.checkbox,
+.RadGrid_Bootstrap .rgAltRow .RadButton_Bootstrap.checkbox:hover {
+    background-color: #F9F9F9 !important;
+}
+
+.RadGrid_Bootstrap .RadButton_Bootstrap span {
+    color: #333 !important;
+}
+.RadGrid_Bootstrap td {
+    padding: 0px 3px !important;
+    font-size: 12px !important;
+}
+
+.RadGrid_Bootstrap .rgAdvPart {
+    display: none !important;
+}
+
+.Question {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f7ec44;
+    border-radius: 5px;
+    background-color: #f9f394;
+    margin-bottom: 5px;
+}
+
+.RadInput_Bootstrap.riContSpinButtons,
+.RadInput_Bootstrap .riContentWrapper {
+    padding: 0 0 0 0 !important;
+}
+
+.riContentWrapper {
+    width: 100% !important;
+}
+
+.fullDialog .RadInput_Bootstrap,
+.fullDialog .RadComboBox_Bootstrap {
+    margin-bottom: 5px !important;
+}
+
+.container_rows .row{
+    padding-bottom:5px;
+}
+
+.right-aligned {
+    text-align: right;
+}

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://services.enjoy.cl/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://services.enjoy.cl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://services.enjoy.cl/">
+      <s:element name="validaCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sexo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="fecha_nacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="movil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pais" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaClienteResult" type="tns:RespuestaAlianza" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RespuestaAlianza">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cod_Error" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="registrarPuntos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rut" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="puntos" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cod_transaccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="registrarPuntosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="registrarPuntosResult" type="tns:RespuestaAlianza" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RespuestaAlianza" nillable="true" type="tns:RespuestaAlianza" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validaClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:validaCliente" />
+  </wsdl:message>
+  <wsdl:message name="validaClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:validaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosSoapIn">
+    <wsdl:part name="parameters" element="tns:registrarPuntos" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosSoapOut">
+    <wsdl:part name="parameters" element="tns:registrarPuntosResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaClienteHttpGetIn">
+    <wsdl:part name="apellido" type="s:string" />
+    <wsdl:part name="nombre" type="s:string" />
+    <wsdl:part name="sexo" type="s:string" />
+    <wsdl:part name="fecha_nacimiento" type="s:string" />
+    <wsdl:part name="rut" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="movil" type="s:string" />
+    <wsdl:part name="pais" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validaClienteHttpGetOut">
+    <wsdl:part name="Body" element="tns:RespuestaAlianza" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosHttpGetIn">
+    <wsdl:part name="rut" type="s:string" />
+    <wsdl:part name="puntos" type="s:string" />
+    <wsdl:part name="cod_transaccion" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosHttpGetOut">
+    <wsdl:part name="Body" element="tns:RespuestaAlianza" />
+  </wsdl:message>
+  <wsdl:message name="validaClienteHttpPostIn">
+    <wsdl:part name="apellido" type="s:string" />
+    <wsdl:part name="nombre" type="s:string" />
+    <wsdl:part name="sexo" type="s:string" />
+    <wsdl:part name="fecha_nacimiento" type="s:string" />
+    <wsdl:part name="rut" type="s:string" />
+    <wsdl:part name="telefono" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="movil" type="s:string" />
+    <wsdl:part name="pais" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validaClienteHttpPostOut">
+    <wsdl:part name="Body" element="tns:RespuestaAlianza" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosHttpPostIn">
+    <wsdl:part name="rut" type="s:string" />
+    <wsdl:part name="puntos" type="s:string" />
+    <wsdl:part name="cod_transaccion" type="s:string" />
+    <wsdl:part name="token" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="registrarPuntosHttpPostOut">
+    <wsdl:part name="Body" element="tns:RespuestaAlianza" />
+  </wsdl:message>
+  <wsdl:portType name="wsAlianzaLanDMZSoap">
+    <wsdl:operation name="validaCliente">
+      <wsdl:input message="tns:validaClienteSoapIn" />
+      <wsdl:output message="tns:validaClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <wsdl:input message="tns:registrarPuntosSoapIn" />
+      <wsdl:output message="tns:registrarPuntosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAlianzaLanDMZHttpGet">
+    <wsdl:operation name="validaCliente">
+      <wsdl:input message="tns:validaClienteHttpGetIn" />
+      <wsdl:output message="tns:validaClienteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <wsdl:input message="tns:registrarPuntosHttpGetIn" />
+      <wsdl:output message="tns:registrarPuntosHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsAlianzaLanDMZHttpPost">
+    <wsdl:operation name="validaCliente">
+      <wsdl:input message="tns:validaClienteHttpPostIn" />
+      <wsdl:output message="tns:validaClienteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <wsdl:input message="tns:registrarPuntosHttpPostIn" />
+      <wsdl:output message="tns:registrarPuntosHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsAlianzaLanDMZSoap" type="tns:wsAlianzaLanDMZSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaCliente">
+      <soap:operation soapAction="http://services.enjoy.cl/validaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <soap:operation soapAction="http://services.enjoy.cl/registrarPuntos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAlianzaLanDMZSoap12" type="tns:wsAlianzaLanDMZSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaCliente">
+      <soap12:operation soapAction="http://services.enjoy.cl/validaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <soap12:operation soapAction="http://services.enjoy.cl/registrarPuntos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAlianzaLanDMZHttpGet" type="tns:wsAlianzaLanDMZHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="validaCliente">
+      <http:operation location="/validaCliente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <http:operation location="/registrarPuntos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsAlianzaLanDMZHttpPost" type="tns:wsAlianzaLanDMZHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="validaCliente">
+      <http:operation location="/validaCliente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="registrarPuntos">
+      <http:operation location="/registrarPuntos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsAlianzaLanDMZ">
+    <wsdl:port name="wsAlianzaLanDMZSoap" binding="tns:wsAlianzaLanDMZSoap">
+      <soap:address location="http://services.enjoy.cl/ws_alianza_puntos/wsalianza.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAlianzaLanDMZSoap12" binding="tns:wsAlianzaLanDMZSoap12">
+      <soap12:address location="http://services.enjoy.cl/ws_alianza_puntos/wsalianza.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAlianzaLanDMZHttpGet" binding="tns:wsAlianzaLanDMZHttpGet">
+      <http:address location="http://services.enjoy.cl/ws_alianza_puntos/wsalianza.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsAlianzaLanDMZHttpPost" binding="tns:wsAlianzaLanDMZHttpPost">
+      <http:address location="http://services.enjoy.cl/ws_alianza_puntos/wsalianza.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

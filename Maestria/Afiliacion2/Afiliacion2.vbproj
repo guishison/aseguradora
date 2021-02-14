@@ -1,0 +1,1066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
+    <UpgradeBackupLocation />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E71416E2-4277-4CD0-95DB-2981D2059F30}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{f184b08f-c81c-45f6-a57f-5abd9991f28f}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Afiliacion2</RootNamespace>
+    <AssemblyName>Afiliacion2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Afiliacion2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Afiliacion2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AODL">
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\AODL.dll</HintPath>
+    </Reference>
+    <Reference Include="AsyncLib">
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\AsyncLib.dll</HintPath>
+    </Reference>
+    <Reference Include="C5">
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.2.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.2.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.ExceptionHandling.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2018.2.516.45\AdditionalLibraries\Bin45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.registration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Design, Version=2020.1.219.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\Telerik.Web.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection, Version=2020.1.219.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\Telerik.Web.Device.Detection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2020.1.219.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2020.1.219.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2020.1.219.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2020.1.212.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.219.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.OpenXmlRendering.2.7.2, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Services.WebApi, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting.XpsRendering, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Reporting, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.Html5.WebForms, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=14.0.20.219, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Office.Interop.Excel" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\adminlte.css" />
+    <Content Include="assets\css\adminlte2.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\bootstrap.min2.css" />
+    <Content Include="assets\css\bootstrap3-wysihtml5.min.css" />
+    <Content Include="assets\css\css\abStripLite.css" />
+    <Content Include="assets\css\css\Ajax.css" />
+    <Content Include="assets\css\css\ButtonLite.css" />
+    <Content Include="assets\css\css\Common\common.css" />
+    <Content Include="assets\css\css\Common\EditorLite.css" />
+    <Content Include="assets\css\css\Common\fonticons.css" />
+    <Content Include="assets\css\css\Common\FormDecoratorLite.css" />
+    <Content Include="assets\css\css\Common\MaterialRipple.css" />
+    <Content Include="assets\css\css\Common\MultiPage.css" />
+    <Content Include="assets\css\css\Common\Widgets.css" />
+    <Content Include="assets\css\css\DefaultLite\Button.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Editor.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\FileExplorer.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Grid.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\ListView.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Menu.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Slider.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Splitter.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\TabStrip.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\ToolBar.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\ToolTip.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\TreeView.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Upload.Default.css" />
+    <Content Include="assets\css\css\DefaultLite\Window.Default.css" />
+    <Content Include="assets\css\css\Default\Ajax.Default.css" />
+    <Content Include="assets\css\css\Default\FormDecorator.Default.css" />
+    <Content Include="assets\css\css\Default\Menu.Default.css" />
+    <Content Include="assets\css\css\Default\Widgets.Default.css" />
+    <Content Include="assets\css\css\Editor.Default.css" />
+    <Content Include="assets\css\css\EditorLite.css" />
+    <Content Include="assets\css\css\FileExplorerLite.css" />
+    <Content Include="assets\css\css\fonticons.css" />
+    <Content Include="assets\css\css\FormDecorator.Default.css" />
+    <Content Include="assets\css\css\FormDecoratorLite.css" />
+    <Content Include="assets\css\css\GridLite.css" />
+    <Content Include="assets\css\css\ListViewLite.css" />
+    <Content Include="assets\css\css\MaterialRipple.css" />
+    <Content Include="assets\css\css\Menu.css" />
+    <Content Include="assets\css\css\MenuLite.css" />
+    <Content Include="assets\css\css\MultiPage.css" />
+    <Content Include="assets\css\css\SliderLite.css" />
+    <Content Include="assets\css\css\SplitterLite.css" />
+    <Content Include="assets\css\css\TabStrip.css" />
+    <Content Include="assets\css\css\TabStrip.Default.css" />
+    <Content Include="assets\css\css\TabStripLite.css" />
+    <Content Include="assets\css\css\ToolBarLite.css" />
+    <Content Include="assets\css\css\ToolTipLite.css" />
+    <Content Include="assets\css\css\TreeViewLite.css" />
+    <Content Include="assets\css\css\UploadLite.css" />
+    <Content Include="assets\css\css\Widgets.css" />
+    <Content Include="assets\css\css\Widgets.Default.css" />
+    <Content Include="assets\css\css\WindowLite.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\font-awesome2.min.css" />
+    <Content Include="assets\css\fullcalendar.css" />
+    <Content Include="assets\css\hacks.css" />
+    <Content Include="assets\css\iCheck\minimal\minimal.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_217bc0_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_2e83ff_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_469bdd_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_6da8d5_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="assets\css\Images\jQueryUI\ui-icons_f9bd01_256x240.png" />
+    <Content Include="assets\css\ionicons.min.css" />
+    <Content Include="assets\css\ionicons2.min.css" />
+    <Content Include="assets\css\jquery-ui.min.css" />
+    <Content Include="assets\css\jquery.ui.custom.css" />
+    <Content Include="assets\css\lightgallery.css" />
+    <Content Include="assets\css\lightgallery.min.css" />
+    <Content Include="assets\css\pace.min.css" />
+    <Content Include="assets\css\yellow.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\fonts\ionicons.svg" />
+    <Content Include="assets\fonts\lg.svg" />
+    <Content Include="assets\image\1.jpg" />
+    <Content Include="assets\image\2.png" />
+    <Content Include="assets\image\3.png" />
+    <Content Include="assets\image\4.jpg" />
+    <Content Include="assets\image\f1.jpg" />
+    <Content Include="assets\image\f2.png" />
+    <Content Include="assets\image\HelpDesk.png" />
+    <Content Include="assets\image\Hotel_Pucon\1.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\10.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\11.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\12.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\13.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\14.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\15.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\2.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\3.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\4.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\5.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\6.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\7.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\8.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\9.jpg" />
+    <Content Include="assets\image\Hotel_Pucon\arrows.gif" />
+    <Content Include="assets\image\enjoy.gif" />
+    <Content Include="assets\image\Hotel_Pucon\enjoy2.gif" />
+    <Content Include="assets\image\Hotel_Pucon\enjoy2.jpg" />
+    <Content Include="assets\image\logo2.ico" />
+    <Content Include="assets\image\logob.png" />
+    <Content Include="assets\image\logo.png" />
+    <Content Include="assets\image\logosinletra.png" />
+    <Content Include="assets\image\logosinletrablanco.png" />
+    <Content Include="assets\image\logoV2.png" />
+    <Content Include="assets\image\Yotau.gif" />
+    <Content Include="assets\img\loading.gif" />
+    <Content Include="assets\img\loading2.gif" />
+    <Content Include="assets\img\loading3.gif" />
+    <Content Include="assets\img\loading3w.gif" />
+    <Content Include="assets\img\logosinletra.png" />
+    <Content Include="assets\jsPlugin\lg-autoplay.min.js" />
+    <Content Include="assets\jsPlugin\lg-fullscreen.min.js" />
+    <Content Include="assets\jsPlugin\lg-hash.min.js" />
+    <Content Include="assets\jsPlugin\lg-pager.min.js" />
+    <Content Include="assets\jsPlugin\lg-share.min.js" />
+    <Content Include="assets\jsPlugin\lg-thumbnail.min.js" />
+    <Content Include="assets\jsPlugin\lg-video.min.js" />
+    <Content Include="assets\jsPlugin\lg-zoom.min.js" />
+    <Content Include="assets\jsPlugin\lightgalery.js" />
+    <Content Include="assets\jsPlugin\lightgallery.min.js" />
+    <Content Include="assets\jsPlugin\mousewheel.min.js" />
+    <Content Include="assets\jsPlugin\lg-autoplay.js" />
+    <Content Include="assets\jsPlugin\lg-fullscreen.js" />
+    <Content Include="assets\jsPlugin\lg-hash.js" />
+    <Content Include="assets\jsPlugin\lg-pager.js" />
+    <Content Include="assets\jsPlugin\lg-thumbnail.js" />
+    <Content Include="assets\jsPlugin\lg-video.js" />
+    <Content Include="assets\jsPlugin\lg-zoom.js" />
+    <Content Include="assets\jsPlugin\lightgallery.js" />
+    <Content Include="assets\jsPlugin\picturefill.js" />
+    <Content Include="assets\jsPlugin\prueba.js" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\bililiteRange.js" />
+    <Content Include="assets\js\blockUI.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\bootstrap2.min.js" />
+    <Content Include="assets\js\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="assets\js\es.js" />
+    <Content Include="assets\js\fastclick.min.js" />
+    <Content Include="assets\js\fullcalendar.js" />
+    <Content Include="assets\js\html2canvas.js" />
+    <Content Include="assets\js\icheck.js" />
+    <Content Include="assets\js\icheck.min.js" />
+    <Content Include="assets\js\jquery-2.2.3.min.js" />
+    <Content Include="assets\js\Jquery-3.2.1.js" />
+    <Content Include="assets\js\jquery-ui-1.12.1.min.js" />
+    <Content Include="assets\js\jquery-ui.min.js" />
+    <Content Include="assets\js\jquery.1.11.2.js" />
+    <Content Include="assets\js\jquery.linq.js" />
+    <Content Include="assets\js\jquery.linq.min.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\jquery.simulate.drag-n-drop.js" />
+    <Content Include="assets\js\jquery.simulate.ext.js" />
+    <Content Include="assets\js\jquery.simulate.js" />
+    <Content Include="assets\js\jquery.slimscroll.min.js" />
+    <Content Include="assets\js\jquery.ui.custom.js" />
+    <Content Include="assets\js\moment-timezone.js" />
+    <Content Include="assets\js\moment.min.js" />
+    <Content Include="assets\js\pace.min.js" />
+    <Content Include="Download.aspx" />
+    <Content Include="Modulos\Aseguradora\Cotizacion.aspx" />
+    <Content Include="Modulos\Aseguradora\Scripts\Cotizacion.js" />
+    <Content Include="Modulos\Aseguradora\Scripts\Vehiculo.js" />
+    <Content Include="Modulos\Base\Departamento.aspx" />
+    <Content Include="Modulos\Base\Scripts\Departamento.js" />
+    <Content Include="Modulos\Base\Scripts\ParametroPuntoAdicional.js" />
+    <Content Include="Modulos\HelpDesk\Scripts\ScriptGlobal.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Modulos\HelpDesk\HelpDesk.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Modulos\Base\CargoJerarquia.aspx" />
+    <Content Include="Modulos\Base\Clasificadores.aspx" />
+    <Content Include="Modulos\Base\ClasificadoresTipo.aspx" />
+    <Content Include="Modulos\Base\Scripts\CargoJerarquia.js" />
+    <Content Include="Modulos\Base\Scripts\Clasificadores.js" />
+    <Content Include="Modulos\Base\Scripts\ClasificadoresTipo.js" />
+    <Content Include="Modulos\Base\Scripts\Servicios.js" />
+    <Content Include="Modulos\Seguridad\Bitacora.aspx" />
+    <Content Include="Modulos\Seguridad\ParametroLogin.aspx" />
+    <Content Include="Modulos\Seguridad\Cuenta.aspx" />
+    <Content Include="Modulos\Seguridad\PermisoFormulario.aspx" />
+    <Content Include="Modulos\Seguridad\PermisoPlantilla.aspx" />
+    <Content Include="Modulos\Seguridad\Personal.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\GridLocalization.es-Es.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GridLocalization.es-Es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadComboBox.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadComboBox.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadComboBox.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadComboBox.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadLabel.en-En.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadLabel.en-En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.de-DE.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Dialogs.fr-FR.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Dialogs.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.de-DE.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Main.fr-FR.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Main.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.de-DE.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Modules.fr-FR.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Modules.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.de-DE.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadEditor.Tools.fr-FR.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadEditor.Tools.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadGrid.Main.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadGrid.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadGrid.Main.es.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadGrid.Main.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadProgressArea.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadProgressArea.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadScheduler.Main.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadScheduler.Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadSpell.Dialog.de-DE.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadSpell.Dialog.de-DE.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadSpell.Dialog.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadSpell.Dialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadSpell.Dialog.fr-FR.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadSpell.Dialog.fr-FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadUpload.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadUpload.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RadUpload.es-ES.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RadUpload.es-ES.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Download.aspx.designer.vb">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Download.aspx.vb">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="assets\master\MasterPage.Master.designer.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="assets\master\MasterPage.Master.vb">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Cotizacion.aspx.designer.vb">
+      <DependentUpon>Cotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Cotizacion.aspx.vb">
+      <DependentUpon>Cotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Base\Departamento.aspx.designer.vb">
+      <DependentUpon>Departamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Base\Departamento.aspx.vb">
+      <DependentUpon>Departamento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\HelpDesk\HelpDesk.aspx.designer.vb">
+      <DependentUpon>HelpDesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\HelpDesk\HelpDesk.aspx.vb">
+      <DependentUpon>HelpDesk.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Base\CargoJerarquia.aspx.designer.vb">
+      <DependentUpon>CargoJerarquia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Base\CargoJerarquia.aspx.vb">
+      <DependentUpon>CargoJerarquia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Base\Clasificadores.aspx.designer.vb">
+      <DependentUpon>Clasificadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Base\Clasificadores.aspx.vb">
+      <DependentUpon>Clasificadores.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Base\ClasificadoresTipo.aspx.designer.vb">
+      <DependentUpon>ClasificadoresTipo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Base\ClasificadoresTipo.aspx.vb">
+      <DependentUpon>ClasificadoresTipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Bitacora.aspx.designer.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Bitacora.aspx.vb">
+      <DependentUpon>Bitacora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\ParametroLogin.aspx.designer.vb">
+      <DependentUpon>ParametroLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\ParametroLogin.aspx.vb">
+      <DependentUpon>ParametroLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Cuenta.aspx.designer.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Cuenta.aspx.vb">
+      <DependentUpon>Cuenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoFormulario.aspx.designer.vb">
+      <DependentUpon>PermisoFormulario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoFormulario.aspx.vb">
+      <DependentUpon>PermisoFormulario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoPlantilla.aspx.designer.vb">
+      <DependentUpon>PermisoPlantilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoPlantilla.aspx.vb">
+      <DependentUpon>PermisoPlantilla.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Personal.aspx.designer.vb">
+      <DependentUpon>Personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\Personal.aspx.vb">
+      <DependentUpon>Personal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoPersonal.aspx.designer.vb">
+      <DependentUpon>PermisoPersonal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PermisoPersonal.aspx.vb">
+      <DependentUpon>PermisoPersonal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PersonalDepartamento.aspx.designer.vb">
+      <DependentUpon>PersonalDepartamento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Seguridad\PersonalDepartamento.aspx.vb">
+      <DependentUpon>PersonalDepartamento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Vehiculo.aspx.designer.vb">
+      <DependentUpon>Vehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Vehiculo.aspx.vb">
+      <DependentUpon>Vehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="App_Code\UtilsMethods.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PruebaPeticionPuntos.asmx.vb">
+      <DependentUpon>PruebaPeticionPuntos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service References\EnjoyPuntosTest\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\Labels.resx" />
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.es-ES.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.es-ES.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.es-ES.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.es-ES.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.de-DE.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.fr-FR.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Dialogs.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Dialogs.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.de-DE.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.fr-FR.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Main.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.de-DE.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.fr-FR.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Modules.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Modules.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.de-DE.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.fr-FR.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadEditor.Tools.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadEditor.Tools.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadProgressArea.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadProgressArea.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadScheduler.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadScheduler.Main.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadSpell.Dialog.de-DE.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadSpell.Dialog.de-DE.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadSpell.Dialog.fr-FR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadSpell.Dialog.fr-FR.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadSpell.Dialog.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadSpell.Dialog.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadUpload.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadUpload.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\GridLocalization.es-Es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GridLocalization.es-Es.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadGrid.Main.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadGrid.Main.es.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_GlobalResources\RadGrid.Main.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadGrid.Main.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadLabel.en-En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadLabel.en-En.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_LocalResources\Proveedor.aspx.resx" />
+    <Content Include="App_LocalResources\Proveedor.aspx.en-Us.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </Content>
+    <Content Include="App_GlobalResources\RadUpload.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadUpload.es-ES.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadComboBox.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadComboBox.es-ES.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RadComboBox.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RadComboBox.designer.vb</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\master\MasterPage.Master" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\fonts\ionicons.eot" />
+    <Content Include="assets\fonts\ionicons.ttf" />
+    <Content Include="assets\fonts\ionicons.woff" />
+    <Content Include="assets\fonts\SourceSansProSemibold.woff2" />
+    <Content Include="assets\fonts\SourceSansProLight.woff2" />
+    <Content Include="assets\fonts\SourceSansPro-Light.ttf" />
+    <Content Include="assets\fonts\SourceSansPro-Semibold.ttf" />
+    <Content Include="assets\fonts\qx1LSqts-NtiKcLw4N03IEd0sm1ffa_JvZxsF_BEwQk.woff2" />
+    <Content Include="assets\File\Importacion_contactos.xls" />
+    <Content Include="assets\File\PAT.pdf" />
+    <Content Include="assets\fonts\lg.eot" />
+    <Content Include="assets\fonts\lg.ttf" />
+    <Content Include="assets\fonts\lg.woff" />
+    <Content Include="assets\fonts\SourceSansPro-It.woff2" />
+    <Content Include="assets\fonts\SourceSansPro-SemiboldIt.otf.woff2" />
+    <Content Include="assets\fonts\SourceSansPro-LightIt.otf.woff2" />
+    <Content Include="assets\fonts\SourceSansPro-Regular.otf.woff2" />
+    <Content Include="assets\fonts\SourceSansPro-It.eot" />
+    <Content Include="assets\fonts\SourceSansPro-It.ttf" />
+    <Content Include="assets\fonts\SourceSansPro-It.ttf.woff" />
+    <Content Include="assets\File\Importacion_contactos.xlsx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Afiliaciones2.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Modulos\Seguridad\PermisoPersonal.aspx" />
+    <Content Include="Modulos\Seguridad\PersonalDepartamento.aspx" />
+    <Content Include="Modulos\Seguridad\Scripts\ParametroLogin.js" />
+    <Content Include="Modulos\Seguridad\Scripts\Circular.js" />
+    <Content Include="Modulos\Seguridad\Scripts\Cuenta.js" />
+    <Content Include="Modulos\Seguridad\Scripts\PermisoFormulario.js" />
+    <Content Include="Modulos\Seguridad\Scripts\PermisoPlantilla.js" />
+    <Content Include="Modulos\Seguridad\Scripts\Personal.js" />
+    <Content Include="Modulos\Seguridad\Scripts\PermisoPersonal.js" />
+    <Content Include="Modulos\Aseguradora\Vehiculo.aspx" />
+    <Content Include="PruebaPeticionPuntos.asmx" />
+    <Content Include="Service References\EnjoyPuntosTest\Afiliacion2.EnjoyPuntosTest.RespuestaAlianza.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EnjoyPuntosTest\configuration91.svcinfo" />
+    <None Include="Service References\EnjoyPuntosTest\configuration.svcinfo" />
+    <None Include="Service References\EnjoyPuntosTest\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\EnjoyPuntosTest\wsalianza1.disco" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <None Include="Service References\EnjoyPuntosTest\wsalianza1.wsdl" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BComponents\BComponents.vbproj">
+      <Project>{50ef84ea-9c71-4eae-bed1-b1d90c7869ff}</Project>
+      <Name>BComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BEntities\BEntities.vbproj">
+      <Project>{ba05b28d-ecf6-42a1-b8b4-10af4ae175a9}</Project>
+      <Name>BEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EnjoyPuntosTest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="aspnet_client\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49646</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Aseguradora</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
