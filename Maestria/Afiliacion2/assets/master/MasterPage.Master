@@ -127,6 +127,7 @@
     <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
     <div id="footerContent" style="width: 100%; margin: 0; clear: both; font-size: 11px; text-align: center; font-size: 11px; align-content: center; float: initial">
+        <h1 class="negrita" id="lblConcesionaria" runat="server">CONCESIONARIA</h1>
         <img runat="server" style="width: 4%;" src="~/assets/img/logosinletra.png" id="linkdte" alt="Nagatoshi's" />
         <div>
            Nagatoshi's - Av. Radial 26 entre 4to y 5to anillo C\ Los Managles #25 - Santa Cruz - Bolivia

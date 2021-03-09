@@ -5,6 +5,7 @@ Option Strict On
 Option Infer On
 
 Imports System.ComponentModel.DataAnnotations
+Imports BES = BEntities.Seguridad
 
 Namespace Base
 
@@ -44,6 +45,8 @@ Namespace Base
 #Region " Additional properties "
 
         Public Property Clasificadores As Clasificadores
+        Public Property UnidadNegocio As UnidadNegocio
+        Public Property Personal As BES.Personal
 
 #End Region
 
@@ -63,6 +66,8 @@ Namespace Base
     ''' <remarks></remarks>      
     Public Enum relUNSucursal
         Clasificadores
+        UnidadNegocio
+        Personal
     End Enum
 
 

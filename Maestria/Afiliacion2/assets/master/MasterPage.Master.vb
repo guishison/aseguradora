@@ -83,6 +83,8 @@ Public Class MasterPage
         Dim bc = New BComponents.Seguridad.Personal
         Dim bePersonal = bc.Buscar(Me.funGet_UserCode())
         userName.InnerHtml = bePersonal.Nombre
+        Dim bcUnidadNegocio = New BComponents.Base.UNSucursal
+        lblConcesionaria.InnerHtml = bcUnidadNegocio.Search(bePersonal.UnidadNegocioId).Nombre
     End Sub
 
     Private Sub loadMenu()

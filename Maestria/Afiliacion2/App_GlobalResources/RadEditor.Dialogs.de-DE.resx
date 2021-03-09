@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About_Copyright" xml:space="preserve">
-    <value>Copyright 2002-2015 ©Telerik  Alle Rechte vorbehalten.</value>
+    <value>Copyright 2002-2020 ©Telerik  Alle Rechte vorbehalten.</value>
   </data>
   <data name="About_Title" xml:space="preserve">
     <value>RadEditor von Telerik</value>

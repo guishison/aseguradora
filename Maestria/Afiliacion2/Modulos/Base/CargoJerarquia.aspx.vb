@@ -1,4 +1,5 @@
 ﻿Imports BEB = BEntities.Base
+Imports BE = BEntities
 Imports BCB = BComponents.Base
 Imports BES = BEntities.Seguridad
 Imports BCS = BComponents.Seguridad
@@ -10,6 +11,7 @@ Public Class CargoJerarquia
 
     Private bcPositions As New BCB.Cargo
     Private bePosition As BEB.Cargo
+    Private bcFormulario As New BCS.Formulario
     Private bcBitacoraErrores As New BCBT.BitacoraError
     Private beBitacoraErrores As New BEBT.BitacoraError
     Private bcPersonal As New BCS.Personal
@@ -41,7 +43,8 @@ Public Class CargoJerarquia
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 1008, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.CargosyJerarquias.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
 
             If e.CommandName = "EditPosition" Then
                 If BePrivilegios.Permiso.Contains("M") Then
@@ -86,7 +89,8 @@ Public Class CargoJerarquia
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 1008, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.CargosyJerarquias.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If BePrivilegios.Permiso.Contains("A") Then
 
                 ClearFields()

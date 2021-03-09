@@ -248,10 +248,9 @@ Public Class HelpDesk
         SmtpServer.EnableSsl = True
 
         mail = New MailMessage()
-        mail.From = New MailAddress("enjoyvacationcobranzas@gmail.com")
+        mail.From = New MailAddress("soliznagatoshi@gmail.com")
 
 
-        mail.To.Add("lgarcia@dte.com.bo")
 
 
 
@@ -699,7 +698,7 @@ Public Class HelpDesk
         End If
         rgvAdjuntos.VirtualItemCount = CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).Count
         MyBase.proLoad_RadGrid(rgvAdjuntos, CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)))
-        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp", "funShow_Message('Adjunto Eliminado', 'INFORMATION');", True)
+        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp", "funShow_Message('Adjunto Eliminado', 'CONFIRMATION');", True)
     End Sub
 
     Private Sub rgvAdjuntos_ItemCommand(sender As Object, e As GridCommandEventArgs) Handles rgvAdjuntos.ItemCommand
@@ -829,7 +828,7 @@ Public Class HelpDesk
             CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).ElementAt(Session("IdAdjunto")).StatusType = If(CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).ElementAt(Session("IdAdjunto")).Id = 0, BEntities.StatusType.Insert, BE.StatusType.Update)
             rgvAdjuntos.VirtualItemCount = CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).Count
             MyBase.proLoad_RadGrid(rgvAdjuntos, CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)))
-            ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp2", "closeDialog('divDescripcion'); funShow_Message('Descripcion Actualizada', 'INFORMATION');", True)
+            ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp2", "closeDialog('divDescripcion'); funShow_Message('Descripcion Actualizada', 'CONFIRMATION');", True)
         Catch ex As Exception
             ControlarError(MyBase.ObtenerMetodo, If(ex.InnerException IsNot Nothing, ex.InnerException.ToString, ex.Message))
         End Try
@@ -870,18 +869,18 @@ Public Class HelpDesk
                 If (beHelpDesk.Id = 0 And CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).Count > 0) Then
                     If (CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).ElementAt(0).Archivo IsNot Nothing) Then
                         bcHelpDesk.Save(beHelpDesk)
-                        EnviarCorreo(rtbComentario.Text)
+                        'EnviarCorreo(rtbComentario.Text)
                         proLoadGrid()
-                        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp10", "closeDialog('divDetail'); funShow_Message('Documentos adjuntos guardados', 'INFORMATION');", True)
+                        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp10", "closeDialog('divDetail'); funShow_Message('Documentos adjuntos guardados', 'CONFIRMATION');", True)
                     Else
                         ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp12", "funShow_Message('Debe ingresar una imagen de la insidencia', 'ERROR');", True)
                     End If
                 Else
                     If (beHelpDesk.Id > 0 And CType(Session("listaHelpDeskDetalle"), List(Of BEH.HelpDeskDetalle)).Count > 1) Then
                         bcHelpDesk.Save(beHelpDesk)
-                        EnviarCorreoRespuesta(beHelpDesk)
+                        'EnviarCorreoRespuesta(beHelpDesk)
                         proLoadGrid()
-                        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp10", "closeDialog('divDetail'); funShow_Message('Documentos adjuntos guardados', 'INFORMATION');", True)
+                        ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp10", "closeDialog('divDetail'); funShow_Message('Documentos adjuntos guardados', 'CONFIRMATION');", True)
                     Else
                         ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp11", "funShow_Message('Debe ingresar una descripcion', 'ERROR');", True)
                     End If

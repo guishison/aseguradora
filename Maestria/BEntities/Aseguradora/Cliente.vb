@@ -1,4 +1,5 @@
-﻿Namespace Aseguradora
+﻿Imports BEntities.Base
+Namespace Aseguradora
     <Serializable>
     Public Class Cliente
         Inherits BEntity
@@ -19,6 +20,7 @@
         Public Property Estado As Int16
 #End Region
 #Region "Aditional Properties"
+        Public Property Expedido As Clasificadores
         Public Property Vehiculo As Vehiculo
         Public ReadOnly Property NombreCompleto As String
             Get
@@ -30,5 +32,6 @@
     End Class
     Public Enum relCliente
         Vehiculo
+        Expedido
     End Enum
 End Namespace

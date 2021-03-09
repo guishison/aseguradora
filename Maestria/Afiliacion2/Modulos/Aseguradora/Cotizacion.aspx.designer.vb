@@ -203,22 +203,22 @@ Partial Public Class Cotizacion
     Protected WithEvents Origen As Global.Telerik.Web.UI.RadTextBox
 
     '''<summary>
-    '''Control rtbPrecioVehiculo.
+    '''Control rntPrecioVehiculo.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rtbPrecioVehiculo As Global.Telerik.Web.UI.RadTextBox
+    Protected WithEvents rntPrecioVehiculo As Global.Telerik.Web.UI.RadNumericTextBox
 
     '''<summary>
-    '''Control rtbMontoAsegurado.
+    '''Control rntMontoAsegurado.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents rtbMontoAsegurado As Global.Telerik.Web.UI.RadNumericTextBox
+    Protected WithEvents rntMontoAsegurado As Global.Telerik.Web.UI.RadNumericTextBox
 
     '''<summary>
     '''Control rntTiempo.
@@ -257,13 +257,13 @@ Partial Public Class Cotizacion
     Protected WithEvents rntDescuento As Global.Telerik.Web.UI.RadNumericTextBox
 
     '''<summary>
-    '''Control RadTextBox4.
+    '''Control rntCostoTotal.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents RadTextBox4 As Global.Telerik.Web.UI.RadNumericTextBox
+    Protected WithEvents rntCostoTotal As Global.Telerik.Web.UI.RadNumericTextBox
 
     '''<summary>
     '''Control rbCalcular.

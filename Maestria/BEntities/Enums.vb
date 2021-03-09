@@ -389,9 +389,16 @@ Public Enum TipoClasificadores
     TipoVehiculo = 1100
     OrigenVehiculo = 1101
     Expedido = 1102
+    ParametroOrigen = 1103
+    ParametroDescuento = 1104
 End Enum
 
-
+Public Enum DescuentoParametro As Integer
+    MaximoDescuentoCotizacion = 2526
+End Enum
+Public Enum ParametroOrigen As Integer
+    China = 2527
+End Enum
 Public Enum TiposCarteraContactos As Integer
     PPDD = 2484
     Referido = 2485
@@ -864,6 +871,10 @@ Public Class URLFormularios
     Public Shared ReadOnly BoletaElectronica As URLFormularios = New URLFormularios("/Modulos/Caja/BoletaElectronica.aspx")
     Public Shared ReadOnly ImportaciondePersonal As URLFormularios = New URLFormularios("/Modulos/CallCenter/ImportacionPersonal.aspx")
     Public Shared ReadOnly Vehiculo As URLFormularios = New URLFormularios("/Modulos/Aseguradora/Vehiculo.aspx")
+    Public Shared ReadOnly Cliente As URLFormularios = New URLFormularios("/Modulos/Aseguradora/Cliente.aspx")
+    Public Shared ReadOnly Cotizacion As URLFormularios = New URLFormularios("/Modulos/Aseguradora/Cotizacion.aspx")
+    Public Shared ReadOnly UnidadNegocio As URLFormularios = New URLFormularios("/Modulos/Base/UnidadNegocio.aspx")
+    Public Shared ReadOnly Albunes As URLFormularios = New URLFormularios("/Modulos/Albunes/Albunes.aspx")
 
     Private Sub New(key As String)
         Me.Key = key

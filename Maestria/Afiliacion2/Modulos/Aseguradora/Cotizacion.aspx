@@ -31,6 +31,16 @@
                         <telerik:AjaxUpdatedControl ControlID="paDetail" />
                     </UpdatedControls>
                 </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="rntDescuento">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="paDetail" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="rcbCiudad">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="paDetail" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
                 <telerik:AjaxSetting AjaxControlID="rcbVehiculo">
                     <UpdatedControls>
                         <telerik:AjaxUpdatedControl ControlID="paDetail" />
@@ -176,13 +186,13 @@
                                             </telerik:GridTemplateColumn>
                                             <telerik:GridBoundColumn DataField="Cliente.NombreCompleto" HeaderText="Cliente" UniqueName="Cliente" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
                                             <telerik:GridBoundColumn DataField="Vehiculo.DetalleVehiculo" HeaderText="Detalle Vehiculo" UniqueName="DetalleVehiculo" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="Tasa.Valor" HeaderText="Tasa Valor" UniqueName="Tasa.Valor" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="Tasa.Valor" HeaderText="Tasa Valor" UniqueName="Tasa.Valor" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0.00}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
                                             <telerik:GridBoundColumn DataField="Ciudad.Ciudad" HeaderText="Ciudad" UniqueName="Ciudad" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="MontoAsegurable" HeaderText="Monto Asegurable" UniqueName="MontoAsegurable" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="CostoPrima" HeaderText="Costo Prima" UniqueName="CostoPrima" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="MesesAsegurable" HeaderText="Meses Asegurable" UniqueName="MesesAsegurable" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="Descuento" HeaderText="Descuento" UniqueName="Descuento" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
-                                            <telerik:GridBoundColumn DataField="CostoTotal" HeaderText="Total" UniqueName="CostoTotal" HeaderStyle-HorizontalAlign="Center"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="MontoAsegurable" HeaderText="Monto Asegurable" UniqueName="MontoAsegurable" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0.00}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="CostoPrima" HeaderText="Costo Prima" UniqueName="CostoPrima" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0.00}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="MesesAsegurable" HeaderText="Meses Asegurable" UniqueName="MesesAsegurable" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="Descuento" HeaderText="Descuento" UniqueName="Descuento" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0.00}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
+                                            <telerik:GridBoundColumn DataField="CostoTotal" HeaderText="Total" UniqueName="CostoTotal" HeaderStyle-HorizontalAlign="Center" DataFormatString="{0:###,##0.00}" ItemStyle-HorizontalAlign="Right"></telerik:GridBoundColumn>
                                         </Columns>
                                         <NoRecordsTemplate>
                                             <asp:Label ID="lbEmpty" runat="server" Text="No existen datos." Width="100%"></asp:Label>
@@ -219,7 +229,7 @@
                         <div>
                             <div class="col-lg-2 negrita">Departamento</div>
                             <div class="col-lg-4">
-                                <telerik:RadComboBox ID="rcbCiudad" runat="server" CssClass="combo100porc" OnClientKeyPressing="radComboKeyPress" MaxHeight="150" EnableTextSelection="true" MarkFirstMatch="true" DropDownAutoWidth="Enabled" Filter="Contains" Skin="Bootstrap"></telerik:RadComboBox>
+                                <telerik:RadComboBox ID="rcbCiudad" runat="server" AutoPostBack="true" CssClass="combo100porc" OnClientKeyPressing="radComboKeyPress" MaxHeight="150" EnableTextSelection="true" MarkFirstMatch="true" DropDownAutoWidth="Enabled" Filter="Contains" Skin="Bootstrap"></telerik:RadComboBox>
                             </div>
                             <div class="col-lg-2 negrita">Cliente</div>
                             <div class="col-lg-4">
@@ -233,27 +243,27 @@
                             </div>
                             <div class="col-lg-2 negrita">Potencia</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="rtbPotencia" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadTextBox Enabled="false" ID="rtbPotencia" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
                             </div>
                         </div>
                         <div>
                             <div class="col-lg-2 negrita">Marca</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="rtbMarca" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadTextBox Enabled="false" ID="rtbMarca" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
                             </div>
                             <div class="col-lg-2 negrita">Tipo Vehiculo</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="rtbTipoVehiculo" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadTextBox Enabled="false" ID="rtbTipoVehiculo" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
                             </div>
                         </div>
                         <div>
                             <div class="col-lg-2 negrita">Modelo</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="rtbModelo" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadTextBox Enabled="false" ID="rtbModelo" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
                             </div>
                             <div class="col-lg-2 negrita">Origen</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="Origen" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadTextBox Enabled="false" ID="Origen" runat="server" CssClass="combo100porc" Skin="Bootstrap"></telerik:RadTextBox>
                             </div>
                         </div>
                     </fieldset>
@@ -263,40 +273,40 @@
                         <div>
                             <div class="col-lg-2 negrita">Precio Vehiculo</div>
                             <div class="col-lg-4">
-                                <telerik:RadTextBox ID="rtbPrecioVehiculo" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadTextBox>
+                                <telerik:RadNumericTextBox ID="rntPrecioVehiculo" runat="server" CssClass="combo100porc" ClientEvents-OnBlur="Onblur" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                             <div class="col-lg-2 negrita">Monto Asegurado</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="rtbMontoAsegurado" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntMontoAsegurado" runat="server" CssClass="combo100porc" ClientEvents-OnBlur="Onblur" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                         </div>
                         <div>
                             <div class="col-lg-2 negrita">Tiempo (Meses)</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="rntTiempo" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="0" MinValue="0" NumberFormat-GroupSeparator="" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntTiempo" runat="server" CssClass="combo100porc" ClientEvents-OnBlur="Onblur" NumberFormat-DecimalDigits="0" MinValue="0" NumberFormat-GroupSeparator="" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                             <div class="col-lg-2 negrita">Tasa</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="rntTasa" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntTasa" runat="server" CssClass="combo100porc" ClientEvents-OnBlur="Onblur" Enabled="false" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                         </div>
                         <div>
                             <div class="col-lg-2 negrita">Costo Prima</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="rntCostoPrima" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntCostoPrima" runat="server" CssClass="combo100porc" ClientEvents-OnBlur="Onblur" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                             <div class="col-lg-2 negrita">Descuento</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="rntDescuento" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntDescuento" runat="server" AutoPostBack="true"  ClientEvents-OnBlur="Onblur" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                         </div>
                         <div>
                             <div class="col-lg-2 negrita">Costo Total</div>
                             <div class="col-lg-4">
-                                <telerik:RadNumericTextBox ID="RadTextBox4" runat="server" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
+                                <telerik:RadNumericTextBox ID="rntCostoTotal" Enabled="false" runat="server" ClientEvents-OnBlur="Onblur" CssClass="combo100porc" NumberFormat-DecimalDigits="2" MinValue="0" Skin="Bootstrap"></telerik:RadNumericTextBox>
                             </div>
                             <div class="col-lg-6">
-                                <telerik:RadButton ID="rbCalcular" runat="server" Text="Calcular" AutoPostBack="true" Skin="Bootstrap" OnClientClicking="onSaveClicking" SingleClick="true">
+                                <telerik:RadButton ID="rbCalcular" runat="server" Text="Calcular" AutoPostBack="true" OnClientClicking="onCalcular" Skin="Bootstrap" >
                                     <Icon PrimaryIconCssClass="fa fa-calculator" PrimaryIconTop="10px" />
                                 </telerik:RadButton>
                             </div>
@@ -304,7 +314,7 @@
                     </fieldset>
                 </div>
                 <div class="btn-group pull-right" role="group">
-                    <telerik:RadButton ID="rtbSave" runat="server" Text="Guardar" AutoPostBack="true" Skin="Bootstrap" OnClientClicking="onSaveClicking" SingleClick="true">
+                    <telerik:RadButton ID="rtbSave" runat="server" Text="Guardar" AutoPostBack="true" Skin="Bootstrap" OnClientClicking="onSaveClicking">
                         <Icon PrimaryIconCssClass="fa fa-save" PrimaryIconTop="10px" />
                     </telerik:RadButton>
                     <telerik:RadButton ID="rtbCancel" runat="server" Text="Cancelar" AutoPostBack="true" Skin="Bootstrap" CssClass="btn-danger" OnClientClicking="onCancelClicking">

@@ -137,23 +137,23 @@ Public Class Personal
     End Sub
     Private Sub rgvUsersList_PageIndexChanged(sender As Object, e As Telerik.Web.UI.GridPageChangedEventArgs) Handles rgvUsersList.PageIndexChanged
         sender.CurrentPageIndex = e.NewPageIndex
-        Dim lstPersonal = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocioPadre, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
+        Dim lstPersonal = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocio, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
                                     rgvUsersList.MasterTableView.PageSize, BEC.relPersonal.Cargo, BEC.relPerfilPersonal.Perfil, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
-        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocioPadre)
+        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocio)
         Me.rgvUsersList.DataSource = lstPersonal
     End Sub
 
     Private Sub rgvUsersList_PageSizeChanged(sender As Object, e As Telerik.Web.UI.GridPageSizeChangedEventArgs) Handles rgvUsersList.PageSizeChanged
-        Dim lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocioPadre, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
+        Dim lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocio, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
                                     rgvUsersList.MasterTableView.PageSize, BEC.relPersonal.Cargo, BEC.relPerfilPersonal.Perfil, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
-        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocioPadre)
+        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocio)
         Me.rgvUsersList.DataSource = lstUsers
     End Sub
 
     Protected Sub rgvUsersList_NeedDataSource(sender As Object, e As GridNeedDataSourceEventArgs) Handles rgvUsersList.NeedDataSource
-        Dim lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocioPadre, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
+        Dim lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocio, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
                                     rgvUsersList.MasterTableView.PageSize, BEC.relPersonal.Cargo, BEC.relPerfilPersonal.Perfil, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
-        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocioPadre)
+        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocio)
         Me.rgvUsersList.DataSource = lstUsers
     End Sub
 
@@ -200,10 +200,10 @@ Public Class Personal
 
             rgvUsersList.MasterTableView.CurrentPageIndex = 0
 
-            lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocioPadre, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
+            lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocio, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
                                 rgvUsersList.MasterTableView.PageSize, BEC.relPersonal.Cargo, BEC.relPerfilPersonal.Perfil, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
 
-            Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocioPadre)
+            Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocio)
 
             MyBase.proLoad_RadGrid(rgvUsersList, lstUsers)
         Catch ex As Exception
@@ -220,7 +220,7 @@ Public Class Personal
             beCargo = bcCargo.Search(CInt(e.Value))
             'lstSupervisors = bcPersonal.ListarPersonalPorCargo(beCargo.CargoId)
             Dim lstSupervisors As List(Of BEC.Personal)
-            lstSupervisors = bcPersonal.ListarPersonalPorCargo2(-1, funGet_UnidadNegocioPadre)
+            lstSupervisors = bcPersonal.ListarPersonalPorCargo2(-1, funGet_UnidadNegocio)
             'Validacion para evitar que se supervice a si mismo 
             If ViewState("IdPersonal").ToString <> "" AndAlso IsNumeric(ViewState("IdPersonal")) Then
                 lstSupervisors = (From Supervisors In lstSupervisors Where Supervisors.Id <> CLng(ViewState("IdPersonal"))).ToList
@@ -247,7 +247,7 @@ Public Class Personal
             Dim lstCargo As List(Of BEB.Cargo)
             Dim bcCargo As New BCB.Cargo
             lstCargo = bcCargo.Listas()
-            Me.rgvUsersList.VirtualItemCount = bcPersonal.Count("", "-1", "-1", funGet_UnidadNegocioPadre)
+            Me.rgvUsersList.VirtualItemCount = bcPersonal.Count("", "-1", "-1", funGet_UnidadNegocio)
             'lstProfile = BCProfile.Listar()
             'MyBase.proLoad_RadComboBox(rcbProfileFilter, lstProfile, "Id", "Nombre")
             MyBase.proLoad_RadComboBox(rcbPositionFilter, lstCargo, "Id", "Nombre")
@@ -264,9 +264,9 @@ Public Class Personal
     Private Sub loadGrid()
         Dim lstUsers As New List(Of BEC.Personal)
 
-        lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocioPadre, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
+        lstUsers = bcPersonal.Listar(rtbNameFilter1.Text, funGet_UnidadNegocio, rcbPositionFilter.SelectedValue, "", rgvUsersList.MasterTableView.CurrentPageIndex,
                                 rgvUsersList.MasterTableView.PageSize, BEC.relPersonal.Cargo, BEC.relPerfilPersonal.Perfil, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
-        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocioPadre)
+        Me.rgvUsersList.VirtualItemCount = bcPersonal.Count(rtbNameFilter1.Text, "", rcbPositionFilter.SelectedValue, funGet_UnidadNegocio)
         'bcPersonal.Count(rtbNameFilter1.Text, rcbProfileFilter.SelectedValue, rcbPositionFilter.SelectedValue, "")
 
         MyBase.proLoad_RadGrid(rgvUsersList, lstUsers)
@@ -294,7 +294,7 @@ Public Class Personal
             rcbDependencia.SelectedValue = .DependenciaIdc
             beCargo = bcCargo.Search(.CargoId)
             'lstSupervisors = bcPersonal.ListarPersonalPorCargo(beCargo.CargoId)
-            lstSupervisors = bcPersonal.ListarPersonalPorCargo2(-1, funGet_UnidadNegocioPadre)
+            lstSupervisors = bcPersonal.ListarPersonalPorCargo2(-1, funGet_UnidadNegocio)
             rnbFee.Value = .MontoComision
             If ViewState("IdPersonal").ToString <> "" AndAlso IsNumeric(ViewState("IdPersonal")) Then
                 lstSupervisors = (From Supervisors In lstSupervisors Where Supervisors.Id <> CLng(ViewState("IdPersonal"))).ToList

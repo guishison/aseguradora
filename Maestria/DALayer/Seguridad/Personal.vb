@@ -1527,7 +1527,7 @@ Namespace Seguridad
         ''' <param name="BD"></param>
         ''' <param name="Transaction"></param>
         ''' <remarks></remarks>
-        Friend Sub New(ByVal UseDBCon As Boolean, ByRef BD As Object, ByVal Transaction As DbTransaction)
+        Public Sub New(ByVal UseDBCon As Boolean, ByRef BD As Object, ByVal Transaction As DbTransaction)
             MyBase.New(UseDBCon, BD, Transaction)
         End Sub
 

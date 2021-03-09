@@ -1,6 +1,7 @@
 ﻿Imports BEM = BEntities.Base
 Imports BCM = BComponents.Base
 Imports BE = BEntities
+Imports BCS = BComponents.Seguridad
 Imports Telerik.Web.UI
 Imports BCBT = BComponents.Bitacora
 Imports BEBT = BEntities.Bitacora
@@ -11,6 +12,7 @@ Public Class Clasificadores
 
     Private bcClasificadores As New BCM.Clasificadores
     Private beClasificadores As BEM.Clasificadores
+    Private bcFormulario As New BCS.Formulario
     Private bcBitacoraErrores As New BCBT.BitacoraError
     Private beBitacoraErrores As New BEBT.BitacoraError
     'Shared Property ListaGlobal As List(Of BEM.Clasificadores) = Nothing
@@ -49,7 +51,8 @@ Public Class Clasificadores
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), BE.FormularioDeModulos.Clasificadores, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.Clasificadores.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
 
             If e.CommandName = "Editar" Then
                 If BePrivilegios.Permiso.Contains("M") Then
@@ -94,7 +97,8 @@ Public Class Clasificadores
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), BE.FormularioDeModulos.Clasificadores, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.Clasificadores.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If BePrivilegios.Permiso.Contains("A") Then
 
                 LoadClasificadores(0)

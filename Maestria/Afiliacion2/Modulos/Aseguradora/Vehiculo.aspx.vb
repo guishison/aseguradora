@@ -49,7 +49,7 @@ Public Class Vehiculo
         proInit_Form()
     End Sub
     Private Sub llenarCombos()
-        Dim listaCliente As List(Of BEA.Cliente) = bcCliente.ListadoUN(funGet_UnidadNegocioPadre)
+        Dim listaCliente As List(Of BEA.Cliente) = bcCliente.ListadoUN(funGet_UnidadNegocio)
         Dim listaMarca As List(Of BEB.Clasificadores) = bcClasificador.ListClasificadores(BE.TipoClasificadores.MarcaVehiculo)
         Dim listaModelo As List(Of BEB.Clasificadores) = bcClasificador.ListClasificadores(BE.TipoClasificadores.ModeloVehiculo)
         Dim listaTipoVehiculo As List(Of BEB.Clasificadores) = bcClasificador.ListClasificadores(BE.TipoClasificadores.TipoVehiculo)
@@ -129,15 +129,15 @@ Public Class Vehiculo
         Try
             SaveVehiculo()
             proInit_Form()
-            ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp", "closeDialog('divDetail'); funShow_Message('Vehiculo guardado', 'INFORMATION');", True)
+            ScriptManager.RegisterClientScriptBlock(Page, Me.GetType(), "cerrarpopUp", "closeDialog('divDetail'); funShow_Message('Vehiculo guardado', 'CONFIRMATION');", True)
         Catch ex As Exception
             ControlarError(MyBase.ObtenerMetodo, If(ex.InnerException IsNot Nothing, ex.InnerException.ToString, ex.Message))
         End Try
     End Sub
     Private Sub proInit_Form()
         Try
-            Dim listaVehiculo As List(Of BEA.Vehiculo) = bcVehiculo.List(funGet_UnidadNegocioPadre, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relVehiculo.Cliente, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen)
-            rgvGrid.VirtualItemCount = bcVehiculo.ListCount(funGet_UnidadNegocioPadre)
+            Dim listaVehiculo As List(Of BEA.Vehiculo) = bcVehiculo.List(funGet_UnidadNegocio, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relVehiculo.Cliente, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen)
+            rgvGrid.VirtualItemCount = bcVehiculo.ListCount(funGet_UnidadNegocio)
             MyBase.proLoad_RadGrid(rgvGrid, listaVehiculo)
         Catch ex As Exception
             ControlarError(MyBase.ObtenerMetodo, If(ex.InnerException IsNot Nothing, ex.InnerException.ToString, ex.Message))
@@ -199,7 +199,7 @@ Public Class Vehiculo
                 .ModeloIdc = rcbModelo.SelectedValue
                 .TipoVehiculoIdc = rcbTipoVehiculo.SelectedValue
                 .OrigenIdc = rcbOrigen.SelectedValue
-                .UnidadNegocioId = funGet_UnidadNegocioPadre()
+                .UnidadNegocioId = funGet_UnidadNegocio()
                 .Placa = rtbPlaca.Text
                 .Potencia = rtbPotencia.Text
                 .PersonalModificacionId = MyBase.funGet_UserCode()

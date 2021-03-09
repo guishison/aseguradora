@@ -13,7 +13,12 @@ function funTrim(p_strCad) {
     p_strCad = p_strCad.replace(/^\s*|\s*$/g, "");
     return p_strCad;
 }
+function Onblur(sender, args) {
 
+    if (sender.get_value() == "") {
+        sender.set_value("0");
+    }
+}
 function webdte() {
     //window.location = "http:\\www.dte.com.bo"
 }

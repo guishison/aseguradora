@@ -106,6 +106,9 @@
     <Compile Include="Base\PatronIdentificador.vb" />
     <Compile Include="Base\Provincia.vb" />
     <Compile Include="Base\Region.vb" />
+    <Compile Include="Base\Foto.vb" />
+    <Compile Include="Base\Album.vb" />
+    <Compile Include="Base\RegistroFacturacion.vb" />
     <Compile Include="Base\UnidadNegocio.vb" />
     <Compile Include="Base\UNSucursal.vb" />
     <Compile Include="BCEntity.vb" />

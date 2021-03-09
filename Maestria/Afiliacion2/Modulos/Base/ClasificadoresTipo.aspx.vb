@@ -2,6 +2,8 @@
 Imports BCM = BComponents.Base
 Imports BCBT = BComponents.Bitacora
 Imports BEBT = BEntities.Bitacora
+Imports BCS = BComponents.Seguridad
+Imports BE = BEntities
 Imports Telerik.Web.UI
 Imports BCB = BComponents.Base
 
@@ -11,6 +13,7 @@ Public Class ClasificadoresTipo
     Private beBitacoraErrores As New BEBT.BitacoraError
     Private bcClasificadoresTipos As New BCM.ClasificadoresTipo
     Private beClasificadoresTipo As BEM.ClasificadoresTipo
+    Private bcFormulario As New BCS.Formulario
 
     Private Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not Page.IsPostBack Then
@@ -41,7 +44,8 @@ Public Class ClasificadoresTipo
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 7, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.Clasificadores.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If e.CommandName = "Editar" Then
                 If BePrivilegios.Permiso.Contains("M") Then
                     Dim item As GridDataItem = e.Item

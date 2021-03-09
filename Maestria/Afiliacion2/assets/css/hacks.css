@@ -57,7 +57,10 @@ span RadButton .RadButton_Bootstrap + .rbSkinnedButton + .btn-danger {
     background-color: #d9534f !important;
     border-color: #d43f3a !important;
 }*/
-
+.RadWindow .rwWindowContent .radalert {
+    background-image: url('Images/info3.png') !important;
+    /*background-image: url(WebResource.axd?d=SrHqXeMoIr96esUOc6Lm62Ot_MSEKFeOz6FJAwX3z1g1JQyy7ZCKeIzlbY9ZGdLcjLiJvfijdttIHKEn6QoD1h8-URZjypWN-H_m0ouJYQsWxAkWpWxpzT1Sd_xWF-Tvqgz0SgaMY10HjsOlKc2JmZERinsNF2HUj1Ukz1ckTGc1&t=637176120560000000);*/
+}
     .RadButton_Bootstrap.checkbox,
     .RadButton_Bootstrap.checkbox:hover {
         background-color: #FFF !important;

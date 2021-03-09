@@ -65,7 +65,8 @@ Namespace Aseguradora
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@MesesAsegurable", DbType.Int32, BEobj.MesesAsegurable)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@Descuento", DbType.Decimal, BEobj.Descuento)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@CostoTotal", DbType.Decimal, BEobj.CostoTotal)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalId", DbType.Int32, BEobj.PersonalId)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalId", DbType.Int32, BEObj.PersonalId)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, BEObj.UnidadNegocioId)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalModificacionId", DbType.Int32, BEobj.PersonalModificacionId)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaRegistro", DbType.DateTime, BEobj.FechaRegistro)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaModificacion", DbType.DateTime, BEobj.FechaModificacion)
@@ -147,6 +148,7 @@ Namespace Aseguradora
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@MesesAsegurable", DbType.Int32, BEobj.MesesAsegurable)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@Descuento", DbType.Decimal, BEobj.Descuento)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@CostoTotal", DbType.Decimal, BEobj.CostoTotal)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, BEobj.UnidadNegocioId)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalId", DbType.Int32, BEobj.PersonalId)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalModificacionId", DbType.Int32, BEobj.PersonalModificacionId)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaRegistro", DbType.DateTime, BEobj.FechaRegistro)
@@ -303,25 +305,25 @@ Namespace Aseguradora
         ''' <summary>
         ''' Load Relationship of an Object
         ''' </summary>
-        ''' <param name="BEInstanciaSala">Given Object</param>
+        ''' <param name="BECotizacion">Given Object</param>
         ''' <param name="Relations">Relationship enumerator</param>
         ''' <remarks></remarks>
-        Protected Sub LoadRelations(ByRef BEInstanciaSala As MEB.Cotizacion, ByVal ParamArray Relations() As [Enum])
-            'Dim DALSalas As Sala
+        Protected Sub LoadRelations(ByRef BECotizacion As MEB.Cotizacion, ByVal ParamArray Relations() As [Enum])
+            Dim DALTasa As Tasa
             'Dim DALPersonal As Personal
 
-            'For Each RelationEnum As [Enum] In Relations
-            '    If RelationEnum.Equals(MEM.relInstanciaSala.Personal) Then
-            '        DALPersonal = New Personal(True, CType(MyBase.DBFactory, Object))
-            '        BEInstanciaSala.Personal = DALPersonal.ReturnMaster(BEInstanciaSala.PersonalId, Relations)
-            '    End If
-            '    'Dim Keys() As Int32 = {BEInstanciaSala.Id}
-            '    'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
-            '    '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
-            '    '    BEInstanciaSala.ColeccionSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
-            '    'End If
-            'Next
-            'DALSalas = Nothing
+            For Each RelationEnum As [Enum] In Relations
+                If RelationEnum.Equals(MEB.relCotizacion.Tasa) Then
+                    DALTasa = New Tasa(True, CType(MyBase.DBFactory, Object))
+                    BECotizacion.Tasa = DALTasa.Search(BECotizacion.TasaId, Relations)
+                End If
+                'Dim Keys() As Int32 = {BEInstanciaSala.Id}
+                'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
+                '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
+                '    BEInstanciaSala.ColeccionSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
+                'End If
+            Next
+            DALTasa = Nothing
             'DALPersonal = Nothing
         End Sub
 
@@ -357,7 +359,7 @@ Namespace Aseguradora
             End Try
         End Function
         Public Function ListCount(ByVal UnidadNegocioId As Int32) As Int32
-            Dim strQuery As String = "crm_aseguradora_vehiculo_listadocount"
+            Dim strQuery As String = "crm_aseguradora_cotizacion_listadocount"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
@@ -424,11 +426,14 @@ Namespace Aseguradora
         ''' <remarks>
         ''' </remarks> 
         Public Function Search(ByVal Id As Int32, ByVal ParamArray Relations() As [Enum]) As MEB.Cotizacion
-            Dim strQuery As String = "crm_aseguradora_vehiculo_search"
+            Dim strQuery As String = "crm_aseguradora_cotizacion_search"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@Id", DbType.Int32, Id)
                 Dim Collection As MEB.Cotizacion = MyBase.SQLConvertidorIDataReader(Of MEB.Cotizacion)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                If Collection IsNot Nothing Then
+                    Me.LoadRelations(Collection, Relations)
+                End If
                 Return Collection
             Catch ex As Exception
                 MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)

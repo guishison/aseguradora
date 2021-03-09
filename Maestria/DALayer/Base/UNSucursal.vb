@@ -54,15 +54,17 @@ Namespace Base
             Dim strQuery As String = ""
 
             If BEObj.StatusType = BE.StatusType.Insert Then
-                strQuery = "INSERT INTO base_msbusinessunit " &
-                        "VALUES(@Id,@Name,@Alias,@Correlative,@ClassifierId,@UserId,@Registry); " &
-                        "SELECT @@IDENTITY;"
+                strQuery = "INSERT INTO crm_base_unsucursal " &
+                        "VALUES(@UnidadNegocioId,@Nombre,@Correlativo,@AliasUN,@PersonalId,@FechaReg,@FechaActualizacion,@Estado); " &
+                        "SELECT SCOPE_IDENTITY();"
             ElseIf BEObj.StatusType = BE.StatusType.Update Then
-                strQuery = "UPDATE base_msbusinessunit SET " &
-                        "Name = @Name, Alias = @Alias, Correlative = @Correlative, ClassifierId = @ClassifierId, UserId = @UserId, Registry = @Registry " &
+                strQuery = "UPDATE crm_base_unsucursal SET " &
+                        "UnidadNegocioId = @UnidadNegocioId, Nombre = @Nombre, Correlativo = @Correlativo, AliasUN = @AliasUN, PersonalId = @PersonalId, FechaReg = @FechaReg, FechaActualizacion = @FechaActualizacion, Estado = @Estado " &
                         "WHERE Id = @Id"
             ElseIf BEObj.StatusType = BE.StatusType.Delete Then
-                strQuery = "UPDATE base_msbusinessunit SET UserId = @UserId WHERE Id = @Id;DELETE FROM base_msbusinessunit WHERE Id = @Id"
+                strQuery = "UPDATE crm_base_unsucursal SET " &
+                        "UnidadNegocioId = @UnidadNegocioId, Nombre = @Nombre, Correlativo = @Correlativo, AliasUN = @AliasUN, PersonalId = @PersonalId, FechaReg = @FechaReg, FechaActualizacion = @FechaActualizacion, Estado = @Estado " &
+                        "WHERE Id = @Id"
             End If
 
             Dim DALBitacora = New DALayer.Bitacora.BitacoraGeneral()
@@ -289,29 +291,29 @@ Namespace Base
         ''' <remarks></remarks>
         Protected Sub CargarRelaciones(ByRef Collection As List(Of BAS.UNSucursal), ByVal ParamArray Relations() As [Enum])
 
-            'Dim DALClassifiers As Clasificadores
-            'Dim colClassifiers As List(Of BAS.Classifiers) = Nothing
-            'Dim Keys As IEnumerable(Of Long)
+            Dim DALUnidadNegocio As UnidadNegocio
+            Dim colClassifiers As List(Of BAS.UnidadNegocio) = Nothing
+            Dim Keys As IEnumerable(Of Int32)
 
-            'For Each RelationEnum As [Enum] In Relations
-            '    If RelationEnum.Equals(BAS.relClassifierType.Classifiers) Then
-            '        DALClassifiers = New Classifiers(True, CType(MyBase.DBFactory, Object))
-            '        Keys = (From BEClassifierType In Collection Select BEClassifierType.ClassfierIdc)
-            '        colClassifiers = DALClassifiers.ReturnChild(Keys, Relations)
-            '    End If
-            'Next
+            For Each RelationEnum As [Enum] In Relations
+                If RelationEnum.Equals(BAS.relUNSucursal.UnidadNegocio) Then
+                    DALUnidadNegocio = New UnidadNegocio(True, CType(MyBase.DBFactory, Object))
+                    Keys = (From BEUnidadNegocio In Collection Select BEUnidadNegocio.UnidadNegocioId)
+                    colClassifiers = DALUnidadNegocio.ReturnChild(Keys, Relations)
+                End If
+            Next
 
-            'If Relations.GetLength(0) > 0 Then
-            '    For Each BEBusinessUnit In Collection
-            '        If colClassifiers IsNot Nothing Then
-            '            BEBusinessUnit.Classifier = (From BEObject In colClassifiers
-            '                                         Where BEObject.Id = BEBusinessUnit.ClassfierIdc
-            '                                         Select BEObject).FirstOrDefault
-            '        End If
-            '    Next
-            'End If
+            If Relations.GetLength(0) > 0 Then
+                For Each BEBusinessUnit In Collection
+                    If colClassifiers IsNot Nothing Then
+                        BEBusinessUnit.UnidadNegocio = (From BEObject In colClassifiers
+                                                        Where BEObject.Id = BEBusinessUnit.UnidadNegocioId
+                                                        Select BEObject).FirstOrDefault
+                    End If
+                Next
+            End If
 
-            'DALClassifiers = Nothing
+            DALUnidadNegocio = Nothing
 
         End Sub
 
@@ -357,6 +359,22 @@ Namespace Base
             Dim strQuery As String = "crm_base_unsucursal_lista"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
+                Dim Collection As List(Of BAS.UNSucursal) = MyBase.SQLConvertidorIDataReaderListas(Of BAS.UNSucursal)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                If Collection.Count > 0 Then
+                    Me.CargarRelaciones(Collection, Relaciones)
+                End If
+                Return Collection
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)
+                Return Nothing
+            Finally
+            End Try
+        End Function
+        Public Function ListByUnidadNegocioPadreId(ByVal UnidadNegocioId As Int32, ByVal ParamArray Relaciones() As [Enum]) As List(Of BAS.UNSucursal)
+            Dim strQuery As String = "crm_base_unsucursal_listaByUN"
+            Try
+                MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
                 Dim Collection As List(Of BAS.UNSucursal) = MyBase.SQLConvertidorIDataReaderListas(Of BAS.UNSucursal)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
                 Return Collection
             Catch ex As Exception

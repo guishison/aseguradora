@@ -5,6 +5,8 @@ Option Infer On
 
 Imports BE = BEntities
 Imports MEB = BEntities.Aseguradora
+Imports BEB = BEntities.Base
+Imports DALB = DALayer.Base
 Imports System.Data.Common
 Imports System.Net
 
@@ -26,11 +28,11 @@ Namespace Aseguradora
 
             Dim strQuery As String = ""
             If BEObj.StatusType = BE.StatusType.Insert Then
-                strQuery = "crm_base_pais_insert"
+                strQuery = "crm_aseguradora_cliente_insert"
             ElseIf BEObj.StatusType = BE.StatusType.Update Then
-                strQuery = "crm_base_pais_update"
+                strQuery = "crm_aseguradora_cliente_update"
             ElseIf BEObj.StatusType = BE.StatusType.Delete Then
-                strQuery = "crm_base_pais_update"
+                strQuery = "crm_aseguradora_cliente_update"
             End If
 
             Dim DALBitacora = New DALayer.Bitacora.BitacoraGeneral()
@@ -52,12 +54,12 @@ Namespace Aseguradora
                     If (BEObj.StatusType <> BE.StatusType.Insert) Then
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@Id", DbType.Int32, BEObj.Id)
                     End If
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Nombre", DbType.Int32, BEObj.Nombre)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Apellido", DbType.Int32, BEObj.Apellido)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@CI", DbType.Int32, BEObj.CI)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@TipoVehiculoIdc", DbType.Int32, BEObj.ExpedidoIdc)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Telefono", DbType.Int32, BEObj.Telefono)
-                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaNacimiento", DbType.String, BEObj.FechaNacimiento)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Nombre", DbType.String, BEObj.Nombre)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Apellido", DbType.String, BEObj.Apellido)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@CI", DbType.String, BEObj.CI)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@ExpedidoIdc", DbType.Int32, BEObj.ExpedidoIdc)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@Telefono", DbType.String, BEObj.Telefono)
+                    MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaNacimiento", DbType.DateTime, BEObj.FechaNacimiento)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@Direccion", DbType.String, BEObj.Direccion)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, BEObj.UnidadNegocioId)
                     MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalId", DbType.Int32, BEObj.PersonalId)
@@ -104,11 +106,11 @@ Namespace Aseguradora
             Dim strQuery As String = ""
             For Each BEobj As MEB.Cliente In colBEObj
                 If BEobj.StatusType = BE.StatusType.Insert Then
-                    strQuery = "crm_base_pais_insert"
+                    strQuery = "crm_aseguradora_cliente_insert"
                 ElseIf BEobj.StatusType = BE.StatusType.Update Then
-                    strQuery = "crm_base_pais_update"
+                    strQuery = "crm_aseguradora_cliente_update"
                 ElseIf BEobj.StatusType = BE.StatusType.Delete Then
-                    strQuery = "crm_base_pais_update"
+                    strQuery = "crm_aseguradora_cliente_update"
                 End If
 
                 Dim DALBitacora = New DALayer.Bitacora.BitacoraGeneral()
@@ -130,12 +132,12 @@ Namespace Aseguradora
                         If (BEobj.StatusType <> BE.StatusType.Insert) Then
                             MyBase.DBFactory.AddInParameter(MyBase.Command, "@Id", DbType.Int32, BEobj.Id)
                         End If
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Nombre", DbType.Int32, BEObj.Nombre)
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Apellido", DbType.Int32, BEObj.Apellido)
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@CI", DbType.Int32, BEObj.CI)
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@TipoVehiculoIdc", DbType.Int32, BEObj.ExpedidoIdc)
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Telefono", DbType.Int32, BEObj.Telefono)
-                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaNacimiento", DbType.String, BEObj.FechaNacimiento)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Nombre", DbType.String, BEObj.Nombre)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Apellido", DbType.String, BEObj.Apellido)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@CI", DbType.String, BEObj.CI)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@ExpedidoIdc", DbType.Int32, BEobj.ExpedidoIdc)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@Telefono", DbType.String, BEObj.Telefono)
+                        MyBase.DBFactory.AddInParameter(MyBase.Command, "@FechaNacimiento", DbType.DateTime, BEObj.FechaNacimiento)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@Direccion", DbType.String, BEObj.Direccion)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, BEObj.UnidadNegocioId)
                         MyBase.DBFactory.AddInParameter(MyBase.Command, "@PersonalId", DbType.Int32, BEObj.PersonalId)
@@ -222,57 +224,59 @@ Namespace Aseguradora
         ''' <param name="Relations">Enumerador de Relations a cargar</param>
         ''' <remarks></remarks>
         Protected Sub LoadRelations(ByRef Collection As List(Of MEB.Cliente), ByVal ParamArray Relations() As [Enum])
-            'Dim DALPais As InstanciaSala
-            'Dim colInstanciaSala As List(Of MEM.InstanciaSala) = Nothing
-            'Dim Keys As IEnumerable(Of Int32)
+            Dim DALExpedido As DALB.Clasificadores
+            'Dim DALVehiculo As Vehiculo
+            Dim colExpedido As List(Of BEB.Clasificadores) = Nothing
+            'Dim colVehiculo As List(Of MEB.Vehiculo) = Nothing
+            Dim Keys As IEnumerable(Of Int32)
 
-            'For Each RelationEnum As [Enum] In Relations
-            '    If RelationEnum.Equals(MEM.relMovimientoSala.Sala) Then
-            '        DALInstanciaSala = New InstanciaSala(True, CType(MyBase.DBFactory, Object))
-            '        Keys = (From BEObject In Collection Select BEObject.InstanciaSalaId).Distinct
-            '        colInstanciaSala = DALInstanciaSala.ReturnChild(Keys, Relations)
-            '    End If
-            '    'Keys = From BEInstanciaSala In Collection Select BEInstanciaSala.Id
-            '    'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
-            '    '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
-            '    '    colSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
-            '    'End If
-            'Next
+            For Each RelationEnum As [Enum] In Relations
+                If RelationEnum.Equals(MEB.relCliente.Expedido) Then
+                    DALExpedido = New DALB.Clasificadores(True, CType(MyBase.DBFactory, Object))
+                    Keys = (From BEObject In Collection Select BEObject.ExpedidoIdc).Distinct
+                    colExpedido = DALExpedido.ReturnChild(Keys, Relations)
+                End If
+                'Keys = From BEInstanciaSala In Collection Select BEInstanciaSala.Id
+                'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
+                '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
+                '    colSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
+                'End If
+            Next
 
-            'If Relations.GetLength(0) > 0 Then
-            '    For Each BEMovimientoSala In Collection
-            '        If colInstanciaSala IsNot Nothing Then
-            '            BEMovimientoSala.InstanciaSala = (From BEObject In colInstanciaSala
-            '                                              Where BEObject.Id = BEMovimientoSala.InstanciaSalaId
-            '                                              Select BEObject).FirstOrDefault
-            '        End If
-            '    Next
-            'End If
-            'DALInstanciaSala = Nothing
+            If Relations.GetLength(0) > 0 Then
+                For Each BECliente In Collection
+                    If colExpedido IsNot Nothing Then
+                        BECliente.Expedido = (From BEObject In colExpedido
+                                              Where BEObject.Id = BECliente.ExpedidoIdc
+                                              Select BEObject).FirstOrDefault
+                    End If
+                Next
+            End If
+            DALExpedido = Nothing
         End Sub
 
         ''' <summary>
         ''' Load Relationship of an Object
         ''' </summary>
-        ''' <param name="BEInstanciaSala">Given Object</param>
+        ''' <param name="BECliente">Given Object</param>
         ''' <param name="Relations">Relationship enumerator</param>
         ''' <remarks></remarks>
-        Protected Sub LoadRelations(ByRef BEInstanciaSala As MEB.Cliente, ByVal ParamArray Relations() As [Enum])
-            'Dim DALSalas As Sala
+        Protected Sub LoadRelations(ByRef BECliente As MEB.Cliente, ByVal ParamArray Relations() As [Enum])
+            Dim DALExpedicion As DALB.Clasificadores
             'Dim DALPersonal As Personal
 
-            'For Each RelationEnum As [Enum] In Relations
-            '    If RelationEnum.Equals(MEM.relInstanciaSala.Personal) Then
-            '        DALPersonal = New Personal(True, CType(MyBase.DBFactory, Object))
-            '        BEInstanciaSala.Personal = DALPersonal.ReturnMaster(BEInstanciaSala.PersonalId, Relations)
-            '    End If
-            '    'Dim Keys() As Int32 = {BEInstanciaSala.Id}
-            '    'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
-            '    '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
-            '    '    BEInstanciaSala.ColeccionSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
-            '    'End If
-            'Next
-            'DALSalas = Nothing
+            For Each RelationEnum As [Enum] In Relations
+                If RelationEnum.Equals(MEB.relCliente.Expedido) Then
+                    DALExpedicion = New DALB.Clasificadores(True, CType(MyBase.DBFactory, Object))
+                    BECliente.Expedido = DALExpedicion.ReturnMaster(BECliente.ExpedidoIdc, Relations)
+                End If
+                'Dim Keys() As Int32 = {BEInstanciaSala.Id}
+                'If RelationEnum.Equals(MEM.relInstanciaSala.Sala) Then
+                '    DALSala = New Sala(True, CType(MyBase.DBFactory, Object))
+                '    BEInstanciaSala.ColeccionSala = DALSala.ReturnChildInstanciaSala(Keys, Relations)
+                'End If
+            Next
+            DALExpedicion = Nothing
             'DALPersonal = Nothing
         End Sub
         Friend Function ReturnChild(ByVal Keys As IEnumerable(Of Int32), ByVal ParamArray Relaciones() As [Enum]) As List(Of MEB.Cliente)
@@ -302,7 +306,7 @@ Namespace Aseguradora
         ''' <remarks>
         ''' </remarks>
         Public Function List(ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cliente)
-            Dim strQuery As String = "crm_aseguradora_vehiculo_listado"
+            Dim strQuery As String = "crm_aseguradora_cliente_listado"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Desde", DbType.DateTime, Desde)
@@ -322,7 +326,7 @@ Namespace Aseguradora
             End Try
         End Function
         Public Function ListCount(ByVal UnidadNegocioId As Int32) As Int32
-            Dim strQuery As String = "crm_aseguradora_vehiculo_listadocount"
+            Dim strQuery As String = "crm_aseguradora_cliente_listadocount"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
@@ -408,11 +412,14 @@ Namespace Aseguradora
         ''' <remarks>
         ''' </remarks> 
         Public Function Search(ByVal Id As Int32, ByVal ParamArray Relations() As [Enum]) As MEB.Cliente
-            Dim strQuery As String = "crm_base_pais_buscarporid"
+            Dim strQuery As String = "crm_aseguradora_cliente_search"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@Id", DbType.Int32, Id)
                 Dim Collection As MEB.Cliente = MyBase.SQLConvertidorIDataReader(Of MEB.Cliente)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                If Collection IsNot Nothing Then
+                    Me.LoadRelations(Collection, Relations)
+                End If
                 Return Collection
             Catch ex As Exception
                 MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)

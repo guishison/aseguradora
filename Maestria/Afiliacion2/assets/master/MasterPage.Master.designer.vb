@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class MasterPage
-    
+
     '''<summary>
     '''Control head.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
-    
+
     '''<summary>
     '''Control logo.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents logo As Global.System.Web.UI.HtmlControls.HtmlImage
-    
+
     '''<summary>
     '''Control ImgHelpDesk.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ImgHelpDesk As Global.System.Web.UI.WebControls.HyperLink
-    
+
     '''<summary>
     '''Control Img1.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Img1 As Global.System.Web.UI.HtmlControls.HtmlImage
-    
+
     '''<summary>
     '''Control userName.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents userName As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-    
+
     '''<summary>
     '''Control editProfile.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents editProfile As Global.System.Web.UI.WebControls.HyperLink
-    
+
     '''<summary>
     '''Control closeSession.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents closeSession As Global.System.Web.UI.WebControls.HyperLink
-    
+
     '''<summary>
     '''Control sidebarMenu.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents sidebarMenu As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-    
+
     '''<summary>
     '''Control ContentPlaceHolder1.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
-    
+
     '''<summary>
     '''Control ContentPlaceHolder2.
     '''</summary>
@@ -102,7 +102,16 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents ContentPlaceHolder2 As Global.System.Web.UI.WebControls.ContentPlaceHolder
-    
+
+    '''<summary>
+    '''Control lblConcesionaria.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblConcesionaria As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
     '''<summary>
     '''Control linkdte.
     '''</summary>
@@ -111,7 +120,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents linkdte As Global.System.Web.UI.HtmlControls.HtmlImage
-    
+
     '''<summary>
     '''Control lblVersion.
     '''</summary>
@@ -120,7 +129,7 @@ Partial Public Class MasterPage
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents lblVersion As Global.System.Web.UI.WebControls.Label
-    
+
     '''<summary>
     '''Control lblComentario.
     '''</summary>

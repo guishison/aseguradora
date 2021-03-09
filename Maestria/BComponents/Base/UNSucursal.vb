@@ -7,6 +7,7 @@ Option Infer On
 Imports BAS = BEntities.Base
 Imports BE = BEntities
 Imports DAL = DALayer.Base
+Imports DALP = DALayer.Seguridad
 
 Namespace Base
     <Serializable>
@@ -72,7 +73,7 @@ Namespace Base
         ''' <remarks>
         ''' 	To get relationship objects, suply relationship enumetators
         ''' </remarks>
-        Public Function List(ByVal Order As String, ByVal ParamArray Relations() As [Enum]) As List(Of BAS.UNSucursal)
+        Public Function List2(ByVal Order As String, ByVal ParamArray Relations() As [Enum]) As List(Of BAS.UNSucursal)
             Try
                 Dim BECollection As List(Of BAS.UNSucursal)
 
@@ -101,6 +102,20 @@ Namespace Base
             Return BECollection
         End Function
 
+        Public Function ListaByUnidadNegocioId(ByVal UnidadNegocioId As Int32, ByVal ParamArray Relaciones() As [Enum]) As List(Of BAS.UNSucursal)
+            Dim BECollection As List(Of BAS.UNSucursal) = New List(Of BAS.UNSucursal)
+            'Dim DALObject As DAL.UNSucursal = Nothing
+            Me.ErrorCollection.Clear()
+            Try
+                Using DALObject = New DAL.UNSucursal
+                    BECollection = DALObject.ListByUnidadNegocioPadreId(UnidadNegocioId, Relaciones)
+                End Using
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
+            End Try
+            Return BECollection
+        End Function
+
         ''' <summary>
         ''' 	Search for collection business objects of type BusinessUnit
         ''' </summary>
@@ -109,7 +124,7 @@ Namespace Base
         ''' <returns>Object collection of type BusinessUnit</returns>
         ''' <remarks>
         ''' </remarks>
-        Public Function List(ByVal IdMaster As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of BAS.UNSucursal)
+        Public Function List3(ByVal IdMaster As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of BAS.UNSucursal)
             Try
                 Dim BECollection As List(Of BAS.UNSucursal)
 
@@ -136,12 +151,24 @@ Namespace Base
         ''' </remarks>
         Public Sub Save(ByRef BEObj As BAS.UNSucursal)
             Dim DALObject As DAL.UNSucursal = Nothing
+            Dim DALPersonal As DALP.Personal = Nothing
+            Dim DALPrivilegios As DALP.Privilegio = Nothing
             Me.ErrorCollection.Clear()
             If Me.Validate(BEObj) Then
                 Try
                     DALObject = New DAL.UNSucursal
                     DALObject.OpenConnection()
                     DALObject.Save(BEObj)
+                    DALPersonal = New DALP.Personal(True, CObj(DALObject.DBFactory), DALObject.Transaction)
+                    DALPrivilegios = New DALP.Privilegio(True, CObj(DALObject.DBFactory), DALObject.Transaction)
+                    BEObj.Personal.UnidadNegocioId = BEObj.Id
+                    BEObj.Personal.Nombre = BEObj.Personal.Nombre & BEObj.Id.ToString
+                    BEObj.Personal.Login = BEObj.Personal.Login & BEObj.Id.ToString
+                    DALPersonal.Guardar(BEObj.Personal)
+                    For Each i In BEObj.Personal.CollectionPrivilegios
+                        i.PersonalId = BEObj.Personal.Id
+                    Next
+                    DALPrivilegios.Guardar(BEObj.Personal.CollectionPrivilegios)
                     DALObject.Commit()
                 Catch ex As Exception
                     DALObject.Rollback()

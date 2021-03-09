@@ -388,7 +388,7 @@ Namespace Aseguradora
         ''' <remarks>
         ''' </remarks> 
         Public Function Search(ByVal Id As Int32, ByVal ParamArray Relations() As [Enum]) As MEB.Tasa
-            Dim strQuery As String = "crm_aseguradora_vehiculo_search"
+            Dim strQuery As String = "crm_aseguradora_tasa_search"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@Id", DbType.Int32, Id)

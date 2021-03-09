@@ -120,7 +120,7 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Lista de cajas</h3>
+                            <h3 class="box-title">Lista de parametros de login</h3>
                             <div class="box-tools pull-right">
                                 <div class="btn-group pull-right" role="group">
                                     <telerik:RadButton ID="rbAdd" runat="server" Text="Nuevo" AutoPostBack="true" Skin="Bootstrap" OnClientClicking="onAddClicking">

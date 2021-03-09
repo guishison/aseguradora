@@ -130,7 +130,7 @@ Public Class PermisoPersonal
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 2, funGet_UnidadNegocioPadre())
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 2, funGet_UnidadNegocio())
             If BePrivilegios.Permiso.Contains("A") Then
                 proLoadModules()
                 ClearFields()
@@ -290,7 +290,7 @@ Public Class PermisoPersonal
         Try
             'rbManual.Checked = True
             Dim lstPersonal As New List(Of BEC.Personal)
-            lstPersonal = bcPersonal.ListarCompletoUN(funGet_UnidadNegocioPadre, BEC.relPersonal.Cargo, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
+            lstPersonal = bcPersonal.ListarCompletoUN(funGet_UnidadNegocio, BEC.relPersonal.Cargo, BEC.relPersonal.Supervisor, BEC.relPersonal.UNSucursal)
             Dim lstPlantilla As New List(Of BEC.Plantilla)
             lstPlantilla = bcPlantilla.Listar("", funGet_UnidadNegocioPadre)
             Me.rgvProfileList.VirtualItemCount = bcPersonal.Count("", "-1", "-1", funGet_UnidadNegocioPadre)

@@ -65,7 +65,7 @@ Namespace Resources.RadEditor
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Copyright 2002-2018 ©Progress  All rights reserved..
+        '''  Busca una cadena traducida similar a Copyright 2002-2020 ©Progress  All rights reserved..
         '''</summary>
         Friend Shared ReadOnly Property About_Copyright() As String
             Get

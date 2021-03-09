@@ -52,37 +52,86 @@ function onCancelClicking(sender, args) {
 function onAddClicking(sender, args) {
     showDialog("divDetail");
 }
-
+function onCalcular(sender, args) {
+    var strMessage = "";
+    var rcbCiudad = $find($("[id$='rcbCiudad']").attr("id"));
+    var rcbVehiculo = $find($("[id$='rcbVehiculo']").attr("id"));
+    var rntPrecioVehiculo = $find($("[id$='rntPrecioVehiculo']").attr("id"));
+    var rntMontoAsegurado = $find($("[id$='rntMontoAsegurado']").attr("id"));
+    var rntTiempo = $find($("[id$='rntTiempo']").attr("id"));
+    var rntTasa = $find($("[id$='rntTasa']").attr("id"));
+    if (rcbCiudad.get_value() == "-1") {
+        strMessage += " - Seleccione una ciudad <br />";
+    }
+    if (rcbVehiculo.get_value() == "-1") {
+        strMessage += " - Seleccione un vehiculo <br />";
+    }
+    if (rntPrecioVehiculo.get_value() == 0) {
+        strMessage += " - El precio del vehiculo debe ser mayor a 0 <br />";
+    }
+    if (rntMontoAsegurado.get_value() == 0) {
+        strMessage += " - El monto asegurado del vehiculo debe ser mayor a 0 <br />";
+    }
+    if (rntTiempo.get_value() == 0) {
+        strMessage += " - El tiempo de adquisicion del seguro debe ser mayor a 0 <br />";
+    }
+    if (rntTasa.get_value() == 0) {
+        strMessage += " - La tasa debe ser  mayor a 0 <br />";
+    }
+    if (strMessage == "") {
+        //funCloseModal("divDetail");
+    } else {
+        proShow_Validation("Verifique lo siguiente: <br />" + strMessage, "VALIDACION");
+        args.set_cancel(true);
+    }
+}
 function onSaveClicking(sender, args) {
     var strMessage = "";
+    var rdpDesde = $find($("[id$='rdpDesde']").attr("id"));
+    var rdpHasta = $find($("[id$='rdpHasta']").attr("id"));
+
+    var rcbCiudad = $find($("[id$='rcbCiudad']").attr("id"));
     var rcbCliente = $find($("[id$='rcbCliente']").attr("id"));
-    var rcbMarca = $find($("[id$='rcbMarca']").attr("id"));
-    var rcbModelo = $find($("[id$='rcbModelo']").attr("id"));
-    var rcbTipoVehiculo = $find($("[id$='rcbTipoVehiculo']").attr("id"));
-    var rcbOrigen = $find($("[id$='rcbOrigen']").attr("id"));
-    var rtbPlaca = $find($("[id$='rtbPlaca']").attr("id"));
-    var rtbPotencia = $find($("[id$='rtbPotencia']").attr("id"));
+    var rcbVehiculo = $find($("[id$='rcbVehiculo']").attr("id"));
+    var rntPrecioVehiculo = $find($("[id$='rntPrecioVehiculo']").attr("id"));
+    var rntMontoAsegurado = $find($("[id$='rntMontoAsegurado']").attr("id"));
+    var rntTiempo = $find($("[id$='rntTiempo']").attr("id"));
+    var rntTasa = $find($("[id$='rntTasa']").attr("id"));
+    var rntCostoPrima = $find($("[id$='rntCostoPrima']").attr("id"));
+    var rntCostoTotal = $find($("[id$='rntCostoTotal']").attr("id"));
     //var rcbHotel = $telerik.findComboBox(AVA.getID("rcbHotel"));
+    if (rdpDesde.get_selectedDate() == null) {
+        strMessage += " - Ingrese Una fecha correcta en Fecha Desde <br />";
+    }
+    if (rdpHasta.get_selectedDate() == null) {
+        strMessage += " - Ingrese Una fecha correcta en Fecha Hasta <br />";
+    }
+    if (rcbCiudad.get_value() == "-1") {
+        strMessage += " - Seleccione una ciudad <br />";
+    }
     if (rcbCliente.get_value() == "-1") {
         strMessage += " - Seleccione un cliente <br />";
     }
-    if (rcbMarca.get_value() == "-1") {
-        strMessage += " - Seleccione una marca <br />";
+    if (rcbVehiculo.get_value() == "-1") {
+        strMessage += " - Seleccione un vehiculo <br />";
     }
-    if (rcbModelo.get_value() == "-1") {
-        strMessage += " - Seleccione un modelo <br />";
+    if (rntPrecioVehiculo.get_value() == 0) {
+        strMessage += " - El precio del vehiculo debe ser mayor a 0 <br />";
     }
-    if (rcbTipoVehiculo.get_value() == "-1") {
-        strMessage += " - Seleccione un tipo de vehiculo <br />";
+    if (rntMontoAsegurado.get_value() == 0) {
+        strMessage += " - El monto asegurado del vehiculo debe ser mayor a 0 <br />";
     }
-    if (rcbOrigen.get_value() == "-1") {
-        strMessage += " - Seleccione un origen <br />";
+    if (rntTiempo.get_value() == 0) {
+        strMessage += " - El tiempo de adquisicion del seguro debe ser mayor a 0 <br />";
     }
-    if (rtbPlaca.isEmpty()) {
-        strMessage += " - La placa es requerida <br />";
+    if (rntTasa.get_value() == 0) {
+        strMessage += " - La tasa debe ser  mayor a 0 <br />";
     }
-    if (rtbPotencia.isEmpty()) {
-        strMessage += " - La potencia es requerida <br />";
+    if (rntCostoPrima.get_value() == 0) {
+        strMessage += " - El costo de la prima debe ser  mayor a 0 <br />";
+    }
+    if (rntCostoTotal.get_value() == 0) {
+        strMessage += " - El costo total de la prima debe ser  mayor a 0 <br />";
     }
     if (strMessage == "") {
         //funCloseModal("divDetail");
@@ -97,7 +146,7 @@ function OnEditDatabase() {
 }
 
 function OnDeleteDatabase() {
-    ConfirmDelete('¿Está seguro de eliminar el departamento?', event);
+    ConfirmDelete('¿Está seguro de eliminar la cotizacion?', event);
 }
 
 function OnkeyPress(sender, args) {
@@ -165,7 +214,7 @@ function ConfirmDelete(sender, args) {
         }
     });
 
-    var text = "¿Está seguro de eliminar el vehiculo seleccionado?";
+    var text = "¿Está seguro de eliminar la cotizacion seleccionada?";
     radconfirm(text, callBackFunction, 300, 160, null, "CONFIRMACION");
     args.set_cancel(true);
 }

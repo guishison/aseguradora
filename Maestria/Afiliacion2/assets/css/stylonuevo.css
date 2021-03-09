@@ -1,0 +1,131 @@
+﻿.furniture_logo {
+    float: left;
+    margin-right: 20px;
+}
+.margencito {
+    margin: 4px !important;
+    border: solid 2px yellow !important;
+}
+.margencito2 {
+    margin: 2px !important;
+    font-size: larger;
+    height: 44px !important;
+    font-weight: 900;
+    color: red !important;
+}
+.margencito3 {
+    float: left !important;
+    text-align: center !important;
+    width: 600px !important;
+    height: 450px !important;
+    word-wrap: break-word !important;
+    margin: 5px;
+}
+.image_holder {
+    float: left;
+    overflow: hidden;
+    padding: 20px 13px 12px 20px;
+    background: #e7e7e7;
+}
+
+    .image_holder:after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+.column {
+    float: left;
+    width: 193px;
+    margin-right: 7px;
+}
+
+.single_image {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 7px;
+}
+
+
+.product_info {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 15px;
+}
+
+    .product_info:after {
+        content: "";
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+.single_image:hover .product_info {
+    background: url(images/thumbnail/hover.png);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+.single_image:hover .product,
+.single_image:hover .price {
+    bottom: 15px;
+    position: absolute;
+    color: white;
+}
+
+.product {
+    float: left;
+    font: normal 13px "Segoe UI", sans-serif;
+    color: #444444;
+    padding-left: 10px;
+}
+
+.price {
+    float: right;
+    right: 0;
+    font: bold 13px "Segoe UI", sans-serif;
+    color: #888888;
+    padding-right: 10px;
+}
+
+.column img {
+    font-size: 0;
+    display: block;
+}
+
+#example .demo-container {
+    max-width: 810px;
+}
+
+
+.demo-container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.left-image-gallery {
+    display: inline-block;
+    float: left;
+    padding-right: 50px;
+}
+
+.right-image-gallery {
+    display: inline-block;
+    float: left;
+}
+
+@media (max-width: 1680px) {
+    .demo-container {
+        width: 600px;
+    }
+
+    .right-image-gallery {
+        margin-top: 30px;
+    }
+}
