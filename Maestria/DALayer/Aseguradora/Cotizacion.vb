@@ -243,9 +243,11 @@ Namespace Aseguradora
             Dim DALCliente As Cliente
             Dim DALTasa As Tasa
             Dim DALCiudad As DAL.Comuna
+            Dim DALClasificador As DAL.Clasificadores
             Dim colVehiculo As List(Of MEB.Vehiculo) = Nothing
             Dim colCiudad As List(Of BEB.Comuna) = Nothing
             Dim colTasa As List(Of MEB.Tasa) = Nothing
+            Dim colClasificador As List(Of BEB.Clasificadores) = Nothing
             Dim colCliente As List(Of MEB.Cliente) = Nothing
             Dim Keys As IEnumerable(Of Int32)
 
@@ -269,6 +271,11 @@ Namespace Aseguradora
                     DALTasa = New Tasa(True, CType(MyBase.DBFactory, Object))
                     Keys = (From BEObject In Collection Select BEObject.TasaId).Distinct
                     colTasa = DALTasa.ReturnChild(Keys, Relations)
+                End If
+                If RelationEnum.Equals(MEB.relCotizacion.EstadoCotizacion) Then
+                    DALClasificador = New DAL.Clasificadores(True, CType(MyBase.DBFactory, Object))
+                    Keys = (From BEObject In Collection Select BEObject.EstadoCotizacionIdc).Distinct
+                    colClasificador = DALClasificador.ReturnChild(Keys, Relations)
                 End If
             Next
 
@@ -294,6 +301,11 @@ Namespace Aseguradora
                                              Where BEObject.Id = BECotizacion.TasaId
                                              Select BEObject).FirstOrDefault
                     End If
+                    If colClasificador IsNot Nothing Then
+                        BECotizacion.EstadoCotizacion = (From BEObject In colClasificador
+                                                         Where BEObject.Id = BECotizacion.EstadoCotizacionIdc
+                                                         Select BEObject).FirstOrDefault
+                    End If
                 Next
             End If
             DALCliente = Nothing
@@ -310,9 +322,28 @@ Namespace Aseguradora
         ''' <remarks></remarks>
         Protected Sub LoadRelations(ByRef BECotizacion As MEB.Cotizacion, ByVal ParamArray Relations() As [Enum])
             Dim DALTasa As Tasa
+            Dim DALVehiculo As Vehiculo
+            Dim DALCliente As Cliente
+            Dim DALCiudad As DAL.Comuna
             'Dim DALPersonal As Personal
 
             For Each RelationEnum As [Enum] In Relations
+                If RelationEnum.Equals(MEB.relCotizacion.Tasa) Then
+                    DALTasa = New Tasa(True, CType(MyBase.DBFactory, Object))
+                    BECotizacion.Tasa = DALTasa.Search(BECotizacion.TasaId, Relations)
+                End If
+                If RelationEnum.Equals(MEB.relCotizacion.Vehiculo) Then
+                    DALVehiculo = New Vehiculo(True, CType(MyBase.DBFactory, Object))
+                    BECotizacion.Vehiculo = DALVehiculo.Search(BECotizacion.VehiculoId, Relations)
+                End If
+                If RelationEnum.Equals(MEB.relCotizacion.Cliente) Then
+                    DALCliente = New Cliente(True, CType(MyBase.DBFactory, Object))
+                    BECotizacion.Cliente = DALCliente.Search(BECotizacion.ClienteId, Relations)
+                End If
+                If RelationEnum.Equals(MEB.relCotizacion.Ciudad) Then
+                    DALCiudad = New DAL.Comuna(True, CType(MyBase.DBFactory, Object))
+                    BECotizacion.Ciudad = DALCiudad.Search(BECotizacion.CiudadId, Relations)
+                End If
                 If RelationEnum.Equals(MEB.relCotizacion.Tasa) Then
                     DALTasa = New Tasa(True, CType(MyBase.DBFactory, Object))
                     BECotizacion.Tasa = DALTasa.Search(BECotizacion.TasaId, Relations)
@@ -324,6 +355,9 @@ Namespace Aseguradora
                 'End If
             Next
             DALTasa = Nothing
+            DALVehiculo = Nothing
+            DALCliente = Nothing
+            DALCiudad = Nothing
             'DALPersonal = Nothing
         End Sub
 
@@ -358,10 +392,47 @@ Namespace Aseguradora
             Finally
             End Try
         End Function
+        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
+            Dim strQuery As String = "crm_aseguradora_cotizacion_listadobusqueda"
+            Try
+                MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
+                'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Desde", DbType.DateTime, Desde)
+                'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Hasta", DbType.DateTime, Hasta)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@Text", DbType.String, Text)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@CantidadRegistros", DbType.Int32, CantidadRegistros)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@NumeroPagina", DbType.Int32, NumeroPagina)
+                Dim Collection As List(Of MEB.Cotizacion) = MyBase.SQLConvertidorIDataReaderListas(Of MEB.Cotizacion)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                If Collection.Count > 0 Then
+                    Me.LoadRelations(Collection, Relations)
+                End If
+                Return Collection
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)
+                Return Nothing
+            Finally
+            End Try
+        End Function
         Public Function ListCount(ByVal UnidadNegocioId As Int32) As Int32
             Dim strQuery As String = "crm_aseguradora_cotizacion_listadocount"
             Try
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
+                'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Login", DbType.String, If(Login = "", "%%", String.Concat("%", Login, "%")))
+                Return CInt(MyBase.DBFactory.ExecuteScalar(MyBase.Command))
+
+                'Return Collection
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)
+                Return Nothing
+            Finally
+            End Try
+        End Function
+        Public Function ListBusquedaCount(ByVal Text As String, ByVal UnidadNegocioId As Int32) As Int32
+            Dim strQuery As String = "crm_aseguradora_cotizacion_listadobusquedacount"
+            Try
+                MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
+                MyBase.DBFactory.AddInParameter(MyBase.Command, "@Text", DbType.String, Text)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
                 'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Login", DbType.String, If(Login = "", "%%", String.Concat("%", Login, "%")))
                 Return CInt(MyBase.DBFactory.ExecuteScalar(MyBase.Command))
@@ -443,6 +514,25 @@ Namespace Aseguradora
         End Function
 
 
+        Friend Function ReturnChild(ByVal Keys As IEnumerable(Of Int32), ByVal ParamArray Relaciones() As [Enum]) As List(Of MEB.Cotizacion)
+            'Dim llaves As String = MyBase.KeysArray(Keys).ToString.Replace("(", "(',") 
+            'llaves = llaves.Replace(")", ",')")
+            'Dim strQuery As String = "crm_base_clasificadores_buscarcomunas"
+            Dim strQuery2 As String = "SELECT * from crm_aseguradora_cotizacion where Id IN " & MyBase.KeysArray(Keys)
+            Try
+                MyBase.Command = MyBase.DBFactory.GetSqlStringCommand(strQuery2)
+                'MyBase.DBFactory.AddInParameter(MyBase.Command, "@llaves", DbType.String, llaves)
+                Dim Coleccion As List(Of MEB.Cotizacion) = MyBase.SQLConvertidorIDataReaderListas(Of MEB.Cotizacion)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                If Coleccion IsNot Nothing Then
+                    Me.LoadRelations(Coleccion, Relaciones)
+                End If
+                Return Coleccion
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.DALWrap)
+                Return Nothing
+            Finally
+            End Try
+        End Function
 #End Region
 
 #Region " Constructors"
@@ -487,7 +577,7 @@ Namespace Aseguradora
         ''' <param name="BD"></param>
         ''' <param name="Transaction"></param>
         ''' <remarks></remarks>
-        Friend Sub New(ByVal UseDBCon As Boolean, ByRef BD As Object, ByVal Transaction As DbTransaction)
+        Public Sub New(ByVal UseDBCon As Boolean, ByRef BD As Object, ByVal Transaction As DbTransaction)
             MyBase.New(UseDBCon, BD, Transaction)
         End Sub
 

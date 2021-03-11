@@ -29,7 +29,7 @@ Namespace Aseguradora
         Public ReadOnly Property DetalleVehiculo As String
             Get
                 If Marca IsNot Nothing And Modelo IsNot Nothing And TipoVehiculo IsNot Nothing And Origen IsNot Nothing Then
-                    Return TipoVehiculo.Nombre & " " & Marca.Nombre & " " & Modelo.Nombre
+                    Return TipoVehiculo.Nombre & " " & Marca.Nombre & " " & Modelo.Nombre & " " & Placa
                 End If
                 Return ""
             End Get

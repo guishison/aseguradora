@@ -44,7 +44,7 @@ Public Class ClasificadoresTipo
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.Clasificadores.ToString, funGet_UnidadNegocioPadre)
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.TipoClasificadores.ToString, funGet_UnidadNegocioPadre)
             BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If e.CommandName = "Editar" Then
                 If BePrivilegios.Permiso.Contains("M") Then
@@ -91,7 +91,8 @@ Public Class ClasificadoresTipo
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
-            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), 7, funGet_UnidadNegocio())
+            Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.TipoClasificadores.ToString, funGet_UnidadNegocioPadre)
+            BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If BePrivilegios.Permiso.Contains("A") Then
                 LoadClasificadoresTipo(0)
             Else

@@ -29,6 +29,7 @@ Namespace Aseguradora
         Public Property Vehiculo As Vehiculo
         Public Property Tasa As Tasa
         Public Property Ciudad As Comuna
+        Public Property EstadoCotizacion As Clasificadores
 #End Region
     End Class
     Public Enum relCotizacion
@@ -36,5 +37,6 @@ Namespace Aseguradora
         Vehiculo
         Tasa
         Ciudad
+        EstadoCotizacion
     End Enum
 End Namespace

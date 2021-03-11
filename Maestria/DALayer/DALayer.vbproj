@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Aseguradora\Cliente.vb" />
     <Compile Include="Aseguradora\Cotizacion.vb" />
+    <Compile Include="Aseguradora\Poliza.vb" />
     <Compile Include="Aseguradora\Tasa.vb" />
     <Compile Include="Aseguradora\Vehiculo.vb" />
     <Compile Include="Base\Cargo.vb" />

@@ -5,7 +5,6 @@ Option Infer On
 
 Imports System.ComponentModel.DataAnnotations
 Imports BEntities.Seguridad
-Imports BEC = BEntities.Captacion
 Imports BEB = BEntities.Base
 Imports BEntities.Base
 

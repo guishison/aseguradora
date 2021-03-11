@@ -9,7 +9,7 @@ Imports MEB = BEntities.Aseguradora
 
 Namespace Aseguradora
     <Serializable>
-    Public Class Cotizacion
+    Public Class Poliza
         Inherits BCEntity
 
 #Region " Search Methods "
@@ -24,11 +24,11 @@ Namespace Aseguradora
         '' 	To get relationship objects, suply relationship enumetators
         '' </remarks>
         ''
-        Public Function Search(ByVal Id As Int32, ByVal ParamArray Relations() As [Enum]) As MEB.Cotizacion
-            Dim BEObject As MEB.Cotizacion = Nothing
+        Public Function Search(ByVal Id As Int32, ByVal ParamArray Relations() As [Enum]) As MEB.Poliza
+            Dim BEObject As MEB.Poliza = Nothing
 
             Try
-                Using DALObject As New DAL.Cotizacion
+                Using DALObject As New DAL.Poliza
                     BEObject = DALObject.Search(Id, Relations)
                 End Using
             Catch ex As Exception
@@ -36,9 +36,6 @@ Namespace Aseguradora
             End Try
             Return BEObject
         End Function
-
-
-
 
 #End Region
 
@@ -52,11 +49,11 @@ Namespace Aseguradora
         ''' <remarks>
         ''' 	To get relationship objects, suply relationship enumetators
         ''' </remarks>
-        Public Function List(ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
+        Public Function List(ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Poliza)
             Try
-                Dim BECollection As List(Of MEB.Cotizacion)
+                Dim BECollection As List(Of MEB.Poliza)
 
-                Using DALObject As New DAL.Cotizacion
+                Using DALObject As New DAL.Poliza
                     BECollection = DALObject.List(UnidadNegocioId, CantidadRegistros, NumeroPagina, Relations)
                 End Using
 
@@ -74,7 +71,7 @@ Namespace Aseguradora
             Dim BECollection As Int32 = 0
             Me.ErrorCollection.Clear()
             Try
-                Using DALObject As New DAL.Cotizacion
+                Using DALObject As New DAL.Poliza
                     BECollection = DALObject.ListCount(UnidadNegocioId)
                 End Using
             Catch ex As Exception
@@ -82,57 +79,6 @@ Namespace Aseguradora
             End Try
             Return BECollection
             'Return lngResult
-        End Function
-
-        Public Function List(ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
-            Try
-                Dim BECollection As List(Of MEB.Cotizacion)
-                Using DALObject As New DAL.Cotizacion
-                    BECollection = DALObject.List(Relations)
-                End Using
-                Return BECollection
-            Catch ex As Exception
-                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
-                Return Nothing
-            End Try
-        End Function
-
-        Public Function List(ByVal Filter As String, ByVal Order As String, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
-            Try
-                Dim BECollection As List(Of MEB.Cotizacion)
-
-                Using DALObject As New DAL.Cotizacion
-                    BECollection = DALObject.List(Filter, Order, Relations)
-                End Using
-
-                Return BECollection
-            Catch ex As Exception
-                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
-                Return Nothing
-            End Try
-        End Function
-
-        ''' <summary>
-        ''' 	Search for collection business objects of type Provider
-        ''' </summary>
-        ''' <param name="IdMaster">Relationship Identifier</param>
-        ''' <param name="Relations">Relationship enumerator</param>
-        ''' <returns>Object collection of type Provider</returns>
-        ''' <remarks>
-        ''' </remarks>
-        Public Function List(ByVal IdMaster As Long, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
-            Try
-                Dim BECollection As List(Of MEB.Cotizacion)
-
-                Using DALObject As New DAL.Cotizacion
-                    BECollection = DALObject.List(IdMaster, Relations)
-                End Using
-
-                Return BECollection
-            Catch ex As Exception
-                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
-                Return Nothing
-            End Try
         End Function
 
 #End Region
@@ -145,17 +91,21 @@ Namespace Aseguradora
         ''' <param name="BEObj">Object type Classifiers</param>
         ''' <remarks>
         ''' </remarks>
-        Public Sub Save(ByRef BEObj As MEB.Cotizacion)
-            Dim DALObject As DAL.Cotizacion = Nothing
-
+        Public Sub Save(ByRef BEObj As MEB.Poliza)
+            Dim DALObject As DAL.Poliza = Nothing
+            Dim DALCotizacion As DAL.Cotizacion = Nothing
 
             Me.ErrorCollection.Clear()
 
             If Me.Validate(BEObj) Then
                 Try
-                    DALObject = New DAL.Cotizacion
+                    DALObject = New DAL.Poliza
                     DALObject.OpenConnection()
+                    DALCotizacion = New DAL.Cotizacion(True, CObj(DALObject.DBFactory), DALObject.Transaction)
                     DALObject.Guardar(BEObj)
+                    If BEObj.Cotizacion IsNot Nothing Then
+                        DALCotizacion.Guardar(BEObj.Cotizacion)
+                    End If
                     DALObject.Commit()
                 Catch ex As Exception
                     DALObject.Rollback()
@@ -174,10 +124,10 @@ Namespace Aseguradora
         ''' <param name="colBEObj">Object type Classifier</param>
         ''' <remarks>
         ''' </remarks>
-        Friend Sub Save(ByRef colBEObj As List(Of MEB.Cotizacion), ByVal IdMaster As Long)
-            Dim DALObject As DAL.Cotizacion = Nothing
+        Friend Sub Save(ByRef colBEObj As List(Of MEB.Poliza), ByVal IdMaster As Long)
+            Dim DALObject As DAL.Poliza = Nothing
             Try
-                DALObject = New DAL.Cotizacion
+                DALObject = New DAL.Poliza
                 DALObject.OpenConnection()
                 DALObject.Guardar(colBEObj)
                 DALObject.Commit()
@@ -196,7 +146,7 @@ Namespace Aseguradora
         ''' <returns>True: if object were validated</returns>
         ''' <remarks>
         ''' </remarks>
-        Friend Function Validate(ByRef BEObj As MEB.Cotizacion) As Boolean
+        Friend Function Validate(ByRef BEObj As MEB.Poliza) As Boolean
             Dim bolOk As Boolean = True
 
             If BEObj.StatusType <> BE.StatusType.NoAction Then

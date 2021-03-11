@@ -218,6 +218,7 @@ Public Class Cotizacion
                 '.Placa = rtbPlaca.Text
                 '.Potencia = rtbPotencia.Text
                 .PersonalModificacionId = MyBase.funGet_UserCode()
+                .EstadoCotizacionIdc = BE.EstadoCotizacion.PENDIENTE
                 .FechaModificacion = Now
             End With
             bcCotizacion.Save(beCotizacion)

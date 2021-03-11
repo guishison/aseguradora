@@ -66,6 +66,20 @@ Namespace Aseguradora
                 Return Nothing
             End Try
         End Function
+        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
+            Try
+                Dim BECollection As List(Of MEB.Cotizacion)
+
+                Using DALObject As New DAL.Cotizacion
+                    BECollection = DALObject.ListBuscador(Text, UnidadNegocioId, CantidadRegistros, NumeroPagina, Relations)
+                End Using
+
+                Return BECollection
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
+                Return Nothing
+            End Try
+        End Function
 
 
         Public Function ListCount(ByVal UnidadNegocioId As Int32) As Int32
@@ -76,6 +90,21 @@ Namespace Aseguradora
             Try
                 Using DALObject As New DAL.Cotizacion
                     BECollection = DALObject.ListCount(UnidadNegocioId)
+                End Using
+            Catch ex As Exception
+                MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)
+            End Try
+            Return BECollection
+            'Return lngResult
+        End Function
+        Public Function ListBusquedaCount(ByVal Text As String, ByVal UnidadNegocioId As Int32) As Int32
+            'Dim lngResult As Long = 0
+
+            Dim BECollection As Int32 = 0
+            Me.ErrorCollection.Clear()
+            Try
+                Using DALObject As New DAL.Cotizacion
+                    BECollection = DALObject.ListBusquedaCount(Text, UnidadNegocioId)
                 End Using
             Catch ex As Exception
                 MyBase.ErrorHandler(ex, ErrorPolicy.BCWrap)

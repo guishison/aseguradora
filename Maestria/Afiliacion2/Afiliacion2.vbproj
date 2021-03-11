@@ -443,8 +443,10 @@
     <Content Include="Modulos\Albunes\Scripts\HotelPrograma.js" />
     <Content Include="Modulos\Aseguradora\Cliente.aspx" />
     <Content Include="Modulos\Aseguradora\Cotizacion.aspx" />
+    <Content Include="Modulos\Aseguradora\Poliza.aspx" />
     <Content Include="Modulos\Aseguradora\Scripts\Cotizacion.js" />
     <Content Include="Modulos\Aseguradora\Scripts\Cliente.js" />
+    <Content Include="Modulos\Aseguradora\Scripts\Poliza.js" />
     <Content Include="Modulos\Aseguradora\Scripts\Vehiculo.js" />
     <Content Include="Modulos\Base\Departamento.aspx" />
     <Content Include="Modulos\Base\Scripts\Departamento.js" />
@@ -684,6 +686,13 @@
     <Compile Include="Modulos\Aseguradora\Cotizacion.aspx.vb">
       <DependentUpon>Cotizacion.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Poliza.aspx.designer.vb">
+      <DependentUpon>Poliza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Aseguradora\Poliza.aspx.vb">
+      <DependentUpon>Poliza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Modulos\Base\Departamento.aspx.designer.vb">
       <DependentUpon>Departamento.aspx</DependentUpon>
@@ -1137,7 +1146,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
