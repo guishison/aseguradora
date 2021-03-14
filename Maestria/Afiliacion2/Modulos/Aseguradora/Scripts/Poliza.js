@@ -69,8 +69,25 @@ function onAddClicking(sender, args) {
 function onFindClicking(sender, args) {
     showDialog("divDetail2");
 }
-function OnSelection() {
-    closeDialog("divDetail2");
+function OnSelection(sender, args) {
+    var ce = $find($("[id$='rgvGridCotizacion']").attr("id")).get_masterTableView();
+    var hola = (sender.get_element().parentNode.parentNode.parentNode).id;
+    var item = ce.get_dataItems()[(hola.length == 52 ? hola.charAt(hola.length - 1) : hola.substr(hola.length - 2, 2))];
+    var cell = ce.getCellByColumnUniqueName(item, "Estado");
+    var celda = $telerik.$(cell).text().trim();
+    var callBackFunction = Function.createDelegate(sender, function (shouldSubmit) {
+        if (shouldSubmit) {
+            this.click();
+        }
+    });
+    var text = "";
+    if (String(celda).includes("COMPLETADA")) {
+        console.log(String(celda));
+        proShow_Validation("No se pueden seleccionar cotizaciones completadas.", "VALIDACION");
+        args.set_cancel(true);
+    } else {
+        closeDialog("divDetail2");
+    }
 }
 function onCalcular(sender, args) {
     var strMessage = "";
@@ -105,6 +122,7 @@ function onCalcular(sender, args) {
         args.set_cancel(true);
     }
 }
+
 function onSaveClicking(sender, args) {
     var strMessage = "";
     var rdpFechaPoliza = $find($("[id$='rdpFechaPoliza']").attr("id"));

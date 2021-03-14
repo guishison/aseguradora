@@ -7,13 +7,13 @@
     <!--Dashboard -->
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Corizacion
-                <small>Registro de cotizaciones.</small>
+        <h1>Polizas
+                <small>Registro de Polizas.</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i>Inicio</a></li>
             <li><a href="#"><i class="fa fa-dashboard"></i>Aseguradora</a></li>
-            <li class="active">Cotizacion</li>
+            <li class="active">Poliza</li>
         </ol>
     </section>
     <form id="form" runat="server">
@@ -152,7 +152,7 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Lista de Cotizaciones</h3>
+                            <h3 class="box-title">Lista de Polizas</h3>
                             <div class="box-tools pull-right">
                                 <div class="btn-group pull-right" role="group">
                                     <telerik:RadButton ID="rbAdd" runat="server" Text="Nuevo" AutoPostBack="true" Skin="Bootstrap" OnClientClicking="onAddClicking">
@@ -165,7 +165,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-md-push-6">
                                     <div class="input-group">
-                                        <telerik:RadTextBox ID="rtbFilter" runat="server" Skin="Bootstrap" EmptyMessage="Buscar departamento">
+                                        <telerik:RadTextBox ID="rtbFilter" runat="server" Skin="Bootstrap" EmptyMessage="Buscar Polizas">
                                             <ClientEvents OnKeyPress="OnkeyPress" />
                                         </telerik:RadTextBox>
                                         <span class="input-group-btn">
@@ -337,7 +337,7 @@
                         <div>
                             <div class="col-lg-2 negrita">Vehiculo</div>
                             <div class="col-lg-4">
-                                <telerik:RadComboBox ID="rcbVehiculo" runat="server" CssClass="combo100porc" AutoPostBack="true" OnClientKeyPressing="radComboKeyPress" MaxHeight="150" EnableTextSelection="true" MarkFirstMatch="true" DropDownAutoWidth="Enabled" Filter="Contains" Skin="Bootstrap"></telerik:RadComboBox>
+                                <telerik:RadComboBox ID="rcbVehiculo"  runat="server" CssClass="combo100porc" AutoPostBack="true" OnClientKeyPressing="radComboKeyPress" MaxHeight="150" EnableTextSelection="true" MarkFirstMatch="true" DropDownAutoWidth="Enabled" Filter="Contains" Skin="Bootstrap"></telerik:RadComboBox>
                             </div>
                             <div class="col-lg-2 negrita">Potencia</div>
                             <div class="col-lg-4">

@@ -107,6 +107,9 @@ Public Class Poliza
             Dim BePrivilegios As New BEntities.Seguridad.Privilegio
             Dim BcPrivilegios As New BComponents.Seguridad.Privilegio
 
+            rcbCliente.Enabled = False
+            rcbCiudad.Enabled = False
+            rcbVehiculo.Enabled = False
             Dim beFormularios = bcFormulario.BuscarPorUnidadNegocio(BE.URLFormularios.Poliza.ToString, funGet_UnidadNegocioPadre)
             BePrivilegios = BcPrivilegios.BuscarPrivilegioPorPersonal(funGet_UserCode(), beFormularios.Id, funGet_UnidadNegocioPadre())
             If BePrivilegios.Permiso.Contains("A") Then
@@ -242,6 +245,8 @@ Public Class Poliza
         rtbPotencia.Text = String.Empty
         rdpFechaPoliza.SelectedDate = Now
         rdpFechaInicio.SelectedDate = Now
+        rtbNumeroPoliza.Text = String.Empty
+        rtbCotizacion.Text = String.Empty
         rcbCiudad.ClearSelection()
         rcbCliente.ClearSelection()
         rcbVehiculo.ClearSelection()
@@ -327,8 +332,8 @@ Public Class Poliza
 
     Private Sub rbCalcular_Click(sender As Object, e As EventArgs) Handles rbCalcular.Click
         rntCostoPrima.Value = (((rntTasa.Value * rntMontoAsegurado.Value) / 100) / 12) * rntTiempo.Value
-        rntDescuento.Value = 0
-        rntCostoTotal.Value = rntCostoPrima.Value
+        'rntDescuento.Value = 0
+        rntCostoTotal.Value = rntCostoPrima.Value - rntDescuento.Value
         Dim maximoDescuento = bcClasificador.ListClasificadores(BE.TipoClasificadores.ParametroDescuento)
         ViewState("MaximoDescuento") = (rntCostoPrima.Value * maximoDescuento.FirstOrDefault.Valor) / 100
         'If maximoDescuento IsNot Nothing Then
@@ -337,16 +342,18 @@ Public Class Poliza
     End Sub
 
     Private Sub rntDescuento_TextChanged(sender As Object, e As EventArgs) Handles rntDescuento.TextChanged
-        If rntCostoPrima.Value = 0 Then
-            proShow_Message("Primero debe calcular el monto de la prima.", 350, 80, enuTypeMessage.Validation)
-            rntDescuento.Value = 0
-        Else
-            If rntDescuento.Value > ViewState("MaximoDescuento") Then
-                proShow_Message("El maximo descuento permitido es: " & ViewState("MaximoDescuento"), 350, 80, enuTypeMessage.Validation)
-                rntDescuento.Value = ViewState("MaximoDescuento")
-                rntCostoTotal.Value = rntCostoPrima.Value - rntDescuento.Value
+        If rntDescuento.Value > 0 Then
+            If rntCostoPrima.Value = 0 Then
+                proShow_Message("Primero debe calcular el monto de la prima.", 350, 80, enuTypeMessage.Validation)
+                rntDescuento.Value = 0
             Else
-                rntCostoTotal.Value = rntCostoPrima.Value - rntDescuento.Value
+                If rntDescuento.Value > (ViewState("MaximoDescuento")) Then
+                    proShow_Message("El maximo descuento permitido es " & ViewState("MaximoDescuento"), 350, 80, enuTypeMessage.Validation)
+                    rntDescuento.Value = ViewState("MaximoDescuento")
+                    rntCostoTotal.Value = rntCostoPrima.Value - rntDescuento.Value
+                Else
+                    rntCostoTotal.Value = rntCostoPrima.Value - rntDescuento.Value
+                End If
             End If
         End If
     End Sub
@@ -382,7 +389,7 @@ Public Class Poliza
                 rntDescuento.Value = .Descuento
                 rntCostoTotal.Value = .CostoTotal
                 Dim maximoDescuento = bcClasificador.ListClasificadores(BE.TipoClasificadores.ParametroDescuento)
-                ViewState("MaximoDescuento") = (rntCostoPrima.Value * maximoDescuento.FirstOrDefault.Valor) / 100
+                ViewState("MaximoDescuento") = CInt(((rntCostoPrima.Value * maximoDescuento.FirstOrDefault.Valor) / 100) * 100) / 100
                 ViewState("MinimoTiempo") = rntTiempo.Value
             End With
             ViewState("Cotizacion") = beCotizacion
@@ -390,7 +397,8 @@ Public Class Poliza
     End Sub
 
     Private Sub rbBuscarCotizacion_Click(sender As Object, e As EventArgs) Handles rbBuscarCotizacion.Click
-        Dim listCotizacion As List(Of BEA.Cotizacion) = bcCotizacion.ListBuscador(rtbFilterCotizacion.Text, funGet_UnidadNegocio, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relCotizacion.Cliente, BEA.relCotizacion.Ciudad, BEA.relCotizacion.Vehiculo, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen, BEA.relCotizacion.EstadoCotizacion)
+        rtbFilterCotizacion.Text = String.Empty
+        Dim listCotizacion As List(Of BEA.Cotizacion) = bcCotizacion.ListBuscador(rtbFilterCotizacion.Text, funGet_UnidadNegocio, funGet_UserCode, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relCotizacion.Cliente, BEA.relCotizacion.Ciudad, BEA.relCotizacion.Vehiculo, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen, BEA.relCotizacion.EstadoCotizacion)
         rgvGridCotizacion.VirtualItemCount = bcCotizacion.ListBusquedaCount(rtbFilterCotizacion.Text, funGet_UnidadNegocio)
         MyBase.proLoad_RadGrid(rgvGridCotizacion, listCotizacion)
     End Sub
@@ -406,7 +414,7 @@ Public Class Poliza
     End Sub
 
     Private Sub rbFilterCotizacion_Click(sender As Object, e As EventArgs) Handles rbFilterCotizacion.Click
-        Dim listCotizacion As List(Of BEA.Cotizacion) = bcCotizacion.ListBuscador(rtbFilterCotizacion.Text, funGet_UnidadNegocio, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relCotizacion.Cliente, BEA.relCotizacion.Ciudad, BEA.relCotizacion.Vehiculo, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen, BEA.relCotizacion.EstadoCotizacion)
+        Dim listCotizacion As List(Of BEA.Cotizacion) = bcCotizacion.ListBuscador(rtbFilterCotizacion.Text, funGet_UnidadNegocio, funGet_UserCode, rgvGrid.MasterTableView.CurrentPageIndex, rgvGrid.MasterTableView.PageSize, BEA.relCotizacion.Cliente, BEA.relCotizacion.Ciudad, BEA.relCotizacion.Vehiculo, BEA.relVehiculo.Marca, BEA.relVehiculo.Modelo, BEA.relVehiculo.TipoVehiculo, BEA.relVehiculo.Origen, BEA.relCotizacion.EstadoCotizacion)
         rgvGridCotizacion.VirtualItemCount = bcCotizacion.ListBusquedaCount(rtbFilterCotizacion.Text, funGet_UnidadNegocio)
         MyBase.proLoad_RadGrid(rgvGridCotizacion, listCotizacion)
     End Sub

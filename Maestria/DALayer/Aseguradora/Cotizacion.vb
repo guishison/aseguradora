@@ -392,9 +392,23 @@ Namespace Aseguradora
             Finally
             End Try
         End Function
-        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
+        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal PersonalId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
             Dim strQuery As String = "crm_aseguradora_cotizacion_listadobusqueda"
             Try
+
+                Dim DALBitacora = New DALayer.Bitacora.BitacoraGeneral()
+                DALBitacora.OpenConnection()
+                Dim beBitacora As BEntities.Bitacora.BitacoraGeneral = New BEntities.Bitacora.BitacoraGeneral
+                With beBitacora
+                    .Id = 0
+                    .Procedimiento = strQuery
+                    .Accion = "BUSQUEDA"
+                    .PersonalId = PersonalId
+                    .StatusType = BE.StatusType.Insert
+                    .FechaReg = Now
+                    .TipoTransaccionIdc = BE.TipoTransaccionBitacora.Exitosa
+                End With
+
                 MyBase.Command = MyBase.DBFactory.GetStoredProcCommand(strQuery)
                 'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Desde", DbType.DateTime, Desde)
                 'MyBase.DBFactory.AddInParameter(MyBase.Command, "@Hasta", DbType.DateTime, Hasta)
@@ -402,7 +416,22 @@ Namespace Aseguradora
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@UnidadNegocioId", DbType.Int32, UnidadNegocioId)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@CantidadRegistros", DbType.Int32, CantidadRegistros)
                 MyBase.DBFactory.AddInParameter(MyBase.Command, "@NumeroPagina", DbType.Int32, NumeroPagina)
+
+                Dim hola As String = ""
+                For i As Int32 = 0 To MyBase.Command.Parameters.Count - 1
+                    hola = hola + MyBase.Command.Parameters.Item(i).ParameterName + "=" + MyBase.Command.Parameters.Item(i).Value.ToString + "-.-"
+                Next
+                hola = hola.Replace("@", "")
+                Dim strHostName As String = Dns.GetHostName()
+                Dim ipEntry As IPHostEntry = Dns.GetHostEntry(strHostName)
+                Dim IPcita As String = String.Concat(ipEntry.AddressList(0).ToString, "  -  ", ipEntry.AddressList(1).ToString, "  -  ", ipEntry.AddressList(2).ToString, "  -  ", ipEntry.AddressList(3).ToString)
+                beBitacora.Campos = hola
+                beBitacora.IpCliente = IPcita
+                beBitacora.MaquinaCliente = strHostName
                 Dim Collection As List(Of MEB.Cotizacion) = MyBase.SQLConvertidorIDataReaderListas(Of MEB.Cotizacion)(MyBase.DBFactory.ExecuteReader(MyBase.Command))
+                beBitacora.TransaccionId = 0
+                DALBitacora.Save(beBitacora)
+                DALBitacora.Commit()
                 If Collection.Count > 0 Then
                     Me.LoadRelations(Collection, Relations)
                 End If

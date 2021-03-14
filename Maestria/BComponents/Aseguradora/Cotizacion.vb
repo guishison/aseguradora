@@ -66,12 +66,12 @@ Namespace Aseguradora
                 Return Nothing
             End Try
         End Function
-        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
+        Public Function ListBuscador(ByVal Text As String, ByVal UnidadNegocioId As Int32, ByVal PersonalId As Int32, ByVal CantidadRegistros As Int32, ByVal NumeroPagina As Int32, ByVal ParamArray Relations() As [Enum]) As List(Of MEB.Cotizacion)
             Try
                 Dim BECollection As List(Of MEB.Cotizacion)
 
                 Using DALObject As New DAL.Cotizacion
-                    BECollection = DALObject.ListBuscador(Text, UnidadNegocioId, CantidadRegistros, NumeroPagina, Relations)
+                    BECollection = DALObject.ListBuscador(Text, UnidadNegocioId, PersonalId, CantidadRegistros, NumeroPagina, Relations)
                 End Using
 
                 Return BECollection
